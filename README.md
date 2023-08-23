@@ -2,4 +2,4 @@
 
 ## Spring Core Util
 
-[Spring Core Util]{SpringUtilsKit/README.md}
+[Spring Core Util](SpringUtilsKit/README.md)
