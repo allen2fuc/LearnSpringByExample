@@ -1,0 +1,816 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>UrlResource 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.core.io</a></div>
+        <h2 title="Class UrlResource" class="title">Class UrlResource</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>org.springframework.core.io.InputStreamSource</code>
+                            
+                            ,
+                            
+                            
+                            <code>org.springframework.core.io.Resource</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=UrlResource.html>UrlResource</a></span>
+extends <a href=AbstractFileResolvingResource.html>AbstractFileResolvingResource</a>
+                    </pre>
+                    <div class="block"><p><a href=Resource.html>Resource</a> implementation for <code>java.net.URL</code> locators. Supports resolution as a <code>URL</code> and also as a <code>File</code> in case of the <code>&quot;file:&quot;</code> protocol.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final <a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#uri>uri</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final <a href=https://docs.oracle.com/javase/8/docs/api/java/net/URL.html>URL</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#url>url</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#UrlResource(java.net.URL)">UrlResource</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/net/URL.html>URL</a> url)</code></th>
+                                                <td class="colLast">Create a new <code>UrlResource</code> based on the given URL object.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#UrlResource(java.net.URI)">UrlResource</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a> uri)</code></th>
+                                                <td class="colLast">Create a new <code>UrlResource</code> based on the given URI object.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#UrlResource(java.lang.String)">UrlResource</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> path)</code></th>
+                                                <td class="colLast">Create a new <code>UrlResource</code> based on a URI path.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#UrlResource(java.lang.String,java.lang.String)">UrlResource</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> protocol, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> location)</code></th>
+                                                <td class="colLast">Create a new <code>UrlResource</code> based on a URI specification.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#UrlResource(java.lang.String,java.lang.String,java.lang.String)">UrlResource</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> protocol, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> location, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> fragment)</code></th>
+                                                <td class="colLast">Create a new <code>UrlResource</code> based on a URI specification.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#getURI()>getURI</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns the underlying URI directly, if possible.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/net/URL.html>URL</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#getURL()>getURL</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns the underlying URL reference.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static <a href=UrlResource.html>UrlResource</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#from(java.net.URI)>from</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a> uri) </code>
+                                            </th>
+                                            <td class="colLast">Create a new <code>UrlResource</code> from the given <a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=UrlResource.html>UrlResource</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#from(java.lang.String)>from</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> path) </code>
+                                            </th>
+                                            <td class="colLast">Create a new <code>UrlResource</code> from the given URL path.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html>InputStream</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#getInputStream()>getInputStream</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation opens an InputStream for the given URL.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#isFile()>isFile</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation always returns <code>false</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/io/File.html>File</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#getFile()>getFile</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns a File reference for the underlying URL/URI, provided that it refers to a file in the file system.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code><a href=Resource.html>Resource</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#createRelative(java.lang.String)>createRelative</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> relativePath) </code>
+                                            </th>
+                                            <td class="colLast">This implementation creates a <code>UrlResource</code>, delegating to createRelativeURL for adapting the relative path.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#getFilename()>getFilename</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns the URL-decoded name of the file that this URL refers to.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#getDescription()>getDescription</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns a description that includes the URL.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#equals(Object)>equals</a>(@<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> other) </code>
+                                            </th>
+                                            <td class="colLast">This implementation compares the underlying URL references.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=UrlResource.html#hashCode()>hashCode</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns the hash code of the underlying URL reference.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.org.springframework.core.io.AbstractFileResolvingResource">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;org.springframework.core.io.AbstractFileResolvingResource</h3>
+                                            <code>contentLength, exists, isReadable, lastModified, readableChannel</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.org.springframework.core.io.AbstractResource">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;org.springframework.core.io.AbstractResource</h3>
+                                            <code>isOpen, toString</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.org.springframework.core.io.Resource">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;org.springframework.core.io.Resource</h3>
+                                            <code>getContentAsByteArray, getContentAsString</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="UrlResource(java.net.URL)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>UrlResource</h4>
+                                        <pre>UrlResource(<a href=https://docs.oracle.com/javase/8/docs/api/java/net/URL.html>URL</a> url)</pre>
+                                        <div class="block">Create a new <code>UrlResource</code> based on the given URL object.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>url</code> - a URL</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="UrlResource(java.net.URI)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>UrlResource</h4>
+                                        <pre>UrlResource(<a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a> uri)</pre>
+                                        <div class="block">Create a new <code>UrlResource</code> based on the given URI object.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - a URI</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="UrlResource(java.lang.String)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>UrlResource</h4>
+                                        <pre>UrlResource(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> path)</pre>
+                                        <div class="block">Create a new <code>UrlResource</code> based on a URI path.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>path</code> - a URI path</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="UrlResource(java.lang.String,java.lang.String)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>UrlResource</h4>
+                                        <pre>UrlResource(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> protocol, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> location)</pre>
+                                        <div class="block">Create a new <code>UrlResource</code> based on a URI specification.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>protocol</code> - the URL protocol to use (e.g.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>location</code> - the location (e.g.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="UrlResource(java.lang.String,java.lang.String,java.lang.String)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>UrlResource</h4>
+                                        <pre>UrlResource(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> protocol, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> location, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> fragment)</pre>
+                                        <div class="block">Create a new <code>UrlResource</code> based on a URI specification.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>protocol</code> - the URL protocol to use (e.g.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>location</code> - the location (e.g.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>fragment</code> - the fragment within that location (e.g.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getURI()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getURI</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a> <a href=UrlResource.html#getURI()>getURI</a>()</pre>
+                                        <div class="block"><p>This implementation returns the underlying URI directly, if possible.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getURL()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getURL</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/net/URL.html>URL</a> <a href=UrlResource.html#getURL()>getURL</a>()</pre>
+                                        <div class="block"><p>This implementation returns the underlying URL reference.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="from(java.net.URI)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>from</h4>
+                                        <pre class="methodSignature"> static <a href=UrlResource.html>UrlResource</a> <a href=UrlResource.html#from(java.net.URI)>from</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a> uri)</pre>
+                                        <div class="block"><p>Create a new <code>UrlResource</code> from the given <a href=https://docs.oracle.com/javase/8/docs/api/java/net/URI.html>URI</a>. </p><p>This factory method is a convenience for <a href=UrlResource.html#UrlResource(java.net.URI)>UrlResource</a> that catches any <a href=https://docs.oracle.com/javase/8/docs/api/java/net/MalformedURLException.html>MalformedURLException</a> and rethrows it wrapped in an <a href=https://docs.oracle.com/javase/8/docs/api/java/io/UncheckedIOException.html>UncheckedIOException</a>; suitable for use in <a href=https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html>java.util.stream.Stream</a> and <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html>java.util.Optional</a> APIs or other scenarios when a checked <a href=https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html>IOException</a> is undesirable.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>uri</code> - a URI</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="from(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>from</h4>
+                                        <pre class="methodSignature"> static <a href=UrlResource.html>UrlResource</a> <a href=UrlResource.html#from(java.lang.String)>from</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> path)</pre>
+                                        <div class="block"><p>Create a new <code>UrlResource</code> from the given URL path. </p><p>This factory method is a convenience for <a href=UrlResource.html#UrlResource(java.lang.String)>UrlResource</a> that catches any <a href=https://docs.oracle.com/javase/8/docs/api/java/net/MalformedURLException.html>MalformedURLException</a> and rethrows it wrapped in an <a href=https://docs.oracle.com/javase/8/docs/api/java/io/UncheckedIOException.html>UncheckedIOException</a>; suitable for use in <a href=https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html>java.util.stream.Stream</a> and <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html>java.util.Optional</a> APIs or other scenarios when a checked <a href=https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html>IOException</a> is undesirable.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>path</code> - a URL path</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getInputStream()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getInputStream</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html>InputStream</a> <a href=UrlResource.html#getInputStream()>getInputStream</a>()</pre>
+                                        <div class="block"><p>This implementation opens an InputStream for the given URL. </p><p>It sets the <code>useCaches</code> flag to <code>false</code>, mainly to avoid jar file locking on Windows.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isFile()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isFile</h4>
+                                        <pre class="methodSignature"> boolean <a href=UrlResource.html#isFile()>isFile</a>()</pre>
+                                        <div class="block"><p>This implementation always returns <code>false</code>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getFile()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getFile</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/io/File.html>File</a> <a href=UrlResource.html#getFile()>getFile</a>()</pre>
+                                        <div class="block"><p>This implementation returns a File reference for the underlying URL/URI, provided that it refers to a file in the file system.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createRelative(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createRelative</h4>
+                                        <pre class="methodSignature"> <a href=Resource.html>Resource</a> <a href=UrlResource.html#createRelative(java.lang.String)>createRelative</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> relativePath)</pre>
+                                        <div class="block"><p>This implementation creates a <code>UrlResource</code>, delegating to createRelativeURL for adapting the relative path.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getFilename()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getFilename</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=UrlResource.html#getFilename()>getFilename</a>()</pre>
+                                        <div class="block"><p>This implementation returns the URL-decoded name of the file that this URL refers to.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getDescription()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getDescription</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=UrlResource.html#getDescription()>getDescription</a>()</pre>
+                                        <div class="block"><p>This implementation returns a description that includes the URL.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="equals(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>equals</h4>
+                                        <pre class="methodSignature"> boolean <a href=UrlResource.html#equals(Object)>equals</a>(@<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> other)</pre>
+                                        <div class="block"><p>This implementation compares the underlying URL references.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hashCode()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hashCode</h4>
+                                        <pre class="methodSignature"> int <a href=UrlResource.html#hashCode()>hashCode</a>()</pre>
+                                        <div class="block"><p>This implementation returns the hash code of the underlying URL reference.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

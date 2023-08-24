@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>GenericTypeResolver 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.core</a></div>
+        <h2 title="Class GenericTypeResolver" class="title">Class GenericTypeResolver</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public final class <span class="typeNameLabel"><a href=GenericTypeResolver.html>GenericTypeResolver</a></span>
+
+                    </pre>
+                    <div class="block"><p>Helper class for resolving generic types against type variables. </p><p>Mainly intended for usage within the framework, resolving method parameter types even when they are declared generically.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveParameterType(org.springframework.core.MethodParameter,java.lang.Class)>resolveParameterType</a>(<a href=MethodParameter.html>MethodParameter</a> methodParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; implementationClass) </code>
+                                            </th>
+                                            <td class="colLast">Determine the target type for the given generic parameter type.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveReturnType(java.lang.reflect.Method,java.lang.Class)>resolveReturnType</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html>Method</a> method, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz) </code>
+                                            </th>
+                                            <td class="colLast">Determine the target type for the generic return type of the given method, where formal type variables are declared on the given class.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveReturnTypeArgument(java.lang.reflect.Method,java.lang.Class)>resolveReturnTypeArgument</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html>Method</a> method, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; genericIfc) </code>
+                                            </th>
+                                            <td class="colLast">Resolve the single type argument of the given generic interface against the given target method which is assumed to return the given interface or an implementation of it.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveTypeArgument(java.lang.Class,java.lang.Class)>resolveTypeArgument</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; genericIfc) </code>
+                                            </th>
+                                            <td class="colLast">Resolve the single type argument of the given generic interface against the given target class which is assumed to implement the generic interface and possibly declare a concrete type for its type variable.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveTypeArguments(java.lang.Class,java.lang.Class)>resolveTypeArguments</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; genericIfc) </code>
+                                            </th>
+                                            <td class="colLast">Resolve the type arguments of the given generic interface against the given target class which is assumed to implement the generic interface and possibly declare concrete types for its type variables.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveType(java.lang.reflect.Type,java.lang.Class)>resolveType</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a> genericType, @<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; contextClass) </code>
+                                            </th>
+                                            <td class="colLast">Resolve the given generic type against the given context class, substituting type variables as far as possible.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#resolveType(java.lang.reflect.Type,java.util.Map)>resolveType</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a> genericType, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html>TypeVariable</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a>&gt; map) </code>
+                                            </th>
+                                            <td class="colLast">Resolve the specified generic type against the given TypeVariable map.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html>TypeVariable</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GenericTypeResolver.html#getTypeVariableMap(java.lang.Class)>getTypeVariableMap</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz) </code>
+                                            </th>
+                                            <td class="colLast">Build a mapping of <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html#getName-->TypeVariable names</a> to <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>concrete classes</a> for the specified <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="resolveParameterType(org.springframework.core.MethodParameter,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveParameterType</h4>
+                                        <pre class="methodSignature">@<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html>Deprecated</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=GenericTypeResolver.html#resolveParameterType(org.springframework.core.MethodParameter,java.lang.Class)>resolveParameterType</a>(<a href=MethodParameter.html>MethodParameter</a> methodParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; implementationClass)</pre>
+                                        <div class="block"><p>Determine the target type for the given generic parameter type.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>methodParameter</code> - the method parameter specification</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>implementationClass</code> - the class to resolve type variables against</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resolveReturnType(java.lang.reflect.Method,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveReturnType</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=GenericTypeResolver.html#resolveReturnType(java.lang.reflect.Method,java.lang.Class)>resolveReturnType</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html>Method</a> method, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz)</pre>
+                                        <div class="block"><p>Determine the target type for the generic return type of the given method, where formal type variables are declared on the given class.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>method</code> - the method to introspect</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>clazz</code> - the class to resolve type variables against</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resolveReturnTypeArgument(java.lang.reflect.Method,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveReturnTypeArgument</h4>
+                                        <pre class="methodSignature">@<a href=../lang/Nullable.html>Nullable</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=GenericTypeResolver.html#resolveReturnTypeArgument(java.lang.reflect.Method,java.lang.Class)>resolveReturnTypeArgument</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html>Method</a> method, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; genericIfc)</pre>
+                                        <div class="block"><p>Resolve the single type argument of the given generic interface against the given target method which is assumed to return the given interface or an implementation of it.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>method</code> - the target method to check the return type of</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>genericIfc</code> - the generic interface or superclass to resolve the type argument from</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resolveTypeArgument(java.lang.Class,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveTypeArgument</h4>
+                                        <pre class="methodSignature">@<a href=../lang/Nullable.html>Nullable</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=GenericTypeResolver.html#resolveTypeArgument(java.lang.Class,java.lang.Class)>resolveTypeArgument</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; genericIfc)</pre>
+                                        <div class="block"><p>Resolve the single type argument of the given generic interface against the given target class which is assumed to implement the generic interface and possibly declare a concrete type for its type variable.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>clazz</code> - the target class to check against</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>genericIfc</code> - the generic interface or superclass to resolve the type argument from</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resolveTypeArguments(java.lang.Class,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveTypeArguments</h4>
+                                        <pre class="methodSignature">@<a href=../lang/Nullable.html>Nullable</a>() static <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;&gt; <a href=GenericTypeResolver.html#resolveTypeArguments(java.lang.Class,java.lang.Class)>resolveTypeArguments</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; genericIfc)</pre>
+                                        <div class="block"><p>Resolve the type arguments of the given generic interface against the given target class which is assumed to implement the generic interface and possibly declare concrete types for its type variables.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>clazz</code> - the target class to check against</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>genericIfc</code> - the generic interface or superclass to resolve the type argument from</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resolveType(java.lang.reflect.Type,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveType</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a> <a href=GenericTypeResolver.html#resolveType(java.lang.reflect.Type,java.lang.Class)>resolveType</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a> genericType, @<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; contextClass)</pre>
+                                        <div class="block"><p>Resolve the given generic type against the given context class, substituting type variables as far as possible.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>genericType</code> - the (potentially) generic type</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>contextClass</code> - a context class for the target type, for example a classin which the target type appears in a method signature (can be <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resolveType(java.lang.reflect.Type,java.util.Map)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resolveType</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=GenericTypeResolver.html#resolveType(java.lang.reflect.Type,java.util.Map)>resolveType</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a> genericType, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html>TypeVariable</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a>&gt; map)</pre>
+                                        <div class="block"><p>Resolve the specified generic type against the given TypeVariable map. </p><p>Used by Spring Data.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>genericType</code> - the generic type to resolve</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>map</code> - the TypeVariable Map to resolved against</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getTypeVariableMap(java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getTypeVariableMap</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html>TypeVariable</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html>Type</a>&gt; <a href=GenericTypeResolver.html#getTypeVariableMap(java.lang.Class)>getTypeVariableMap</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; clazz)</pre>
+                                        <div class="block"><p>Build a mapping of <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/TypeVariable.html#getName-->TypeVariable names</a> to <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>concrete classes</a> for the specified <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>. Searches all supertypes, enclosing types and interfaces.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

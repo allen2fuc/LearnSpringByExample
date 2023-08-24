@@ -1,0 +1,1378 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>LogAccessor 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.core.log</a></div>
+        <h2 title="Class LogAccessor" class="title">Class LogAccessor</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=LogAccessor.html>LogAccessor</a></span>
+
+                    </pre>
+                    <div class="block"><p>A convenient accessor for Commons Logging, providing not only <code>CharSequence</code> based log methods but also <code>Supplier</code> based variants for use with Java 8 lambda expressions.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final Log</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#log>log</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LogAccessor(org.apache.commons.logging.Log)">LogAccessor</a></span>(Log log)</code></th>
+                                                <td class="colLast">Create a new accessor for the given Commons Log.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LogAccessor(java.lang.Class)">LogAccessor</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; logCategory)</code></th>
+                                                <td class="colLast">Create a new accessor for the specified Commons Log category.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LogAccessor(java.lang.String)">LogAccessor</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> logCategory)</code></th>
+                                                <td class="colLast">Create a new accessor for the specified Commons Log category.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>final Log</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#getLog()>getLog</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the target Commons Log.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#isFatalEnabled()>isFatalEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is fatal logging currently enabled?</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#isErrorEnabled()>isErrorEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is error logging currently enabled?</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#isWarnEnabled()>isWarnEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is warn logging currently enabled?</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#isInfoEnabled()>isInfoEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is info logging currently enabled?</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#isDebugEnabled()>isDebugEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is debug logging currently enabled?</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#isTraceEnabled()>isTraceEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is trace logging currently enabled?</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#fatal(java.lang.CharSequence)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with fatal log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#fatal(java.lang.Throwable,java.lang.CharSequence)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with fatal log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#error(java.lang.CharSequence)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with error log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#error(java.lang.Throwable,java.lang.CharSequence)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with error log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#warn(java.lang.CharSequence)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with warn log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#warn(java.lang.Throwable,java.lang.CharSequence)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with warn log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#info(java.lang.CharSequence)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with info log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#info(java.lang.Throwable,java.lang.CharSequence)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with info log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#debug(java.lang.CharSequence)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with debug log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#debug(java.lang.Throwable,java.lang.CharSequence)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with debug log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#trace(java.lang.CharSequence)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with trace log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#trace(java.lang.Throwable,java.lang.CharSequence)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with trace log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#fatal(java.util.function.Supplier)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with fatal log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#fatal(java.lang.Throwable,java.util.function.Supplier)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with fatal log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#error(java.util.function.Supplier)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with error log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#error(java.lang.Throwable,java.util.function.Supplier)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with error log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#warn(java.util.function.Supplier)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with warn log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#warn(java.lang.Throwable,java.util.function.Supplier)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with warn log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#info(java.util.function.Supplier)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with info log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#info(java.lang.Throwable,java.util.function.Supplier)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with info log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#debug(java.util.function.Supplier)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with debug log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#debug(java.lang.Throwable,java.util.function.Supplier)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with debug log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#trace(java.util.function.Supplier)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log a message with trace log level.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LogAccessor.html#trace(java.lang.Throwable,java.util.function.Supplier)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Log an error with trace log level.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="LogAccessor(org.apache.commons.logging.Log)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LogAccessor</h4>
+                                        <pre>LogAccessor(Log log)</pre>
+                                        <div class="block">Create a new accessor for the given Commons Log.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="LogAccessor(java.lang.Class)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LogAccessor</h4>
+                                        <pre>LogAccessor(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; logCategory)</pre>
+                                        <div class="block">Create a new accessor for the specified Commons Log category.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="LogAccessor(java.lang.String)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LogAccessor</h4>
+                                        <pre>LogAccessor(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> logCategory)</pre>
+                                        <div class="block">Create a new accessor for the specified Commons Log category.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getLog()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getLog</h4>
+                                        <pre class="methodSignature"> final Log <a href=LogAccessor.html#getLog()>getLog</a>()</pre>
+                                        <div class="block"><p>Return the target Commons Log.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isFatalEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isFatalEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LogAccessor.html#isFatalEnabled()>isFatalEnabled</a>()</pre>
+                                        <div class="block"><p>Is fatal logging currently enabled?</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isErrorEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isErrorEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LogAccessor.html#isErrorEnabled()>isErrorEnabled</a>()</pre>
+                                        <div class="block"><p>Is error logging currently enabled?</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isWarnEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isWarnEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LogAccessor.html#isWarnEnabled()>isWarnEnabled</a>()</pre>
+                                        <div class="block"><p>Is warn logging currently enabled?</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isInfoEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isInfoEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LogAccessor.html#isInfoEnabled()>isInfoEnabled</a>()</pre>
+                                        <div class="block"><p>Is info logging currently enabled?</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isDebugEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isDebugEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LogAccessor.html#isDebugEnabled()>isDebugEnabled</a>()</pre>
+                                        <div class="block"><p>Is debug logging currently enabled?</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isTraceEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isTraceEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LogAccessor.html#isTraceEnabled()>isTraceEnabled</a>()</pre>
+                                        <div class="block"><p>Is trace logging currently enabled?</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="fatal(java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>fatal</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#fatal(java.lang.CharSequence)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log a message with fatal log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="fatal(java.lang.Throwable,java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>fatal</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#fatal(java.lang.Throwable,java.lang.CharSequence)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log an error with fatal log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="error(java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>error</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#error(java.lang.CharSequence)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log a message with error log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="error(java.lang.Throwable,java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>error</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#error(java.lang.Throwable,java.lang.CharSequence)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log an error with error log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="warn(java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>warn</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#warn(java.lang.CharSequence)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log a message with warn log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="warn(java.lang.Throwable,java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>warn</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#warn(java.lang.Throwable,java.lang.CharSequence)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log an error with warn log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="info(java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>info</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#info(java.lang.CharSequence)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log a message with info log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="info(java.lang.Throwable,java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>info</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#info(java.lang.Throwable,java.lang.CharSequence)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log an error with info log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="debug(java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>debug</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#debug(java.lang.CharSequence)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log a message with debug log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="debug(java.lang.Throwable,java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>debug</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#debug(java.lang.Throwable,java.lang.CharSequence)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log an error with debug log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="trace(java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>trace</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#trace(java.lang.CharSequence)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log a message with trace log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="trace(java.lang.Throwable,java.lang.CharSequence)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>trace</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#trace(java.lang.Throwable,java.lang.CharSequence)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a> message)</pre>
+                                        <div class="block"><p>Log an error with trace log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="fatal(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>fatal</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#fatal(java.util.function.Supplier)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log a message with fatal log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="fatal(java.lang.Throwable,java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>fatal</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#fatal(java.lang.Throwable,java.util.function.Supplier)>fatal</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log an error with fatal log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="error(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>error</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#error(java.util.function.Supplier)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log a message with error log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="error(java.lang.Throwable,java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>error</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#error(java.lang.Throwable,java.util.function.Supplier)>error</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log an error with error log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="warn(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>warn</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#warn(java.util.function.Supplier)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log a message with warn log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="warn(java.lang.Throwable,java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>warn</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#warn(java.lang.Throwable,java.util.function.Supplier)>warn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log an error with warn log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="info(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>info</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#info(java.util.function.Supplier)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log a message with info log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="info(java.lang.Throwable,java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>info</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#info(java.lang.Throwable,java.util.function.Supplier)>info</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log an error with info log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="debug(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>debug</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#debug(java.util.function.Supplier)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log a message with debug log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="debug(java.lang.Throwable,java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>debug</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#debug(java.lang.Throwable,java.util.function.Supplier)>debug</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log an error with debug log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="trace(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>trace</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#trace(java.util.function.Supplier)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log a message with trace log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="trace(java.lang.Throwable,java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>trace</h4>
+                                        <pre class="methodSignature"> void <a href=LogAccessor.html#trace(java.lang.Throwable,java.util.function.Supplier)>trace</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html>Throwable</a> cause, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html>CharSequence</a>&gt; messageSupplier)</pre>
+                                        <div class="block"><p>Log an error with trace log level.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cause</code> - the exception to log</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>messageSupplier</code> - a lazy supplier for the message to log</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

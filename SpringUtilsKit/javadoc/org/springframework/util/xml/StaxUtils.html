@@ -1,0 +1,1077 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>StaxUtils 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.util.xml</a></div>
+        <h2 title="Class StaxUtils" class="title">Class StaxUtils</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=StaxUtils.html>StaxUtils</a></span>
+
+                    </pre>
+                    <div class="block"><p>Convenience methods for working with the StAX API. Partly historic due to JAXP 1.3 compatibility; as of Spring 4.0, relying on JAXP 1.4 as included in JDK 1.6 and higher. </p><p>In particular, methods for using StAX (<code>javax.xml.stream</code>) in combination with the TrAX API (<code>javax.xml.transform</code>), and converting StAX readers/writers into SAX readers/handlers and vice-versa.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#StaxUtils()">StaxUtils</a></span>()</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html>XMLInputFactory</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createDefensiveInputFactory()>createDefensiveInputFactory</a>() </code>
+                                            </th>
+                                            <td class="colLast">Create an <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html>XMLInputFactory</a> with Spring's defensive setup, i.e.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;T extends <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html>XMLInputFactory</a>&gt; <a href=StaxUtils.html#createDefensiveInputFactory(java.util.function.Supplier)>T</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createDefensiveInputFactory(java.util.function.Supplier)>createDefensiveInputFactory</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;<a href=StaxUtils.html#createDefensiveInputFactory(java.util.function.Supplier)>T</a>&gt; instanceSupplier) </code>
+                                            </th>
+                                            <td class="colLast">Variant of <a href=StaxUtils.html#createDefensiveInputFactory()>createDefensiveInputFactory</a> with a custom instance.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createStaxSource(javax.xml.stream.XMLStreamReader)>createStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> streamReader) </code>
+                                            </th>
+                                            <td class="colLast">Create a JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createStaxSource(javax.xml.stream.XMLEventReader)>createStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader) </code>
+                                            </th>
+                                            <td class="colLast">Create a JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createCustomStaxSource(javax.xml.stream.XMLStreamReader)>createCustomStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> streamReader) </code>
+                                            </th>
+                                            <td class="colLast">Create a custom, non-JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createCustomStaxSource(javax.xml.stream.XMLEventReader)>createCustomStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader) </code>
+                                            </th>
+                                            <td class="colLast">Create a custom, non-JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#isStaxSource(javax.xml.transform.Source)>isStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> source) </code>
+                                            </th>
+                                            <td class="colLast">Indicate whether the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> is a JAXP 1.4 StAX Source or custom StAX Source.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#getXMLStreamReader(javax.xml.transform.Source)>getXMLStreamReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> source) </code>
+                                            </th>
+                                            <td class="colLast">Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> for the given StAX Source.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#getXMLEventReader(javax.xml.transform.Source)>getXMLEventReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> source) </code>
+                                            </th>
+                                            <td class="colLast">Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> for the given StAX Source.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createStaxResult(javax.xml.stream.XMLStreamWriter)>createStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> streamWriter) </code>
+                                            </th>
+                                            <td class="colLast">Create a JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createStaxResult(javax.xml.stream.XMLEventWriter)>createStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter) </code>
+                                            </th>
+                                            <td class="colLast">Create a JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createCustomStaxResult(javax.xml.stream.XMLStreamWriter)>createCustomStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> streamWriter) </code>
+                                            </th>
+                                            <td class="colLast">Create a custom, non-JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createCustomStaxResult(javax.xml.stream.XMLEventWriter)>createCustomStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter) </code>
+                                            </th>
+                                            <td class="colLast">Create a custom, non-JAXP 1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#isStaxResult(javax.xml.transform.Result)>isStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> result) </code>
+                                            </th>
+                                            <td class="colLast">Indicate whether the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> is a JAXP 1.4 StAX Result or custom StAX Result.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#getXMLStreamWriter(javax.xml.transform.Result)>getXMLStreamWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> result) </code>
+                                            </th>
+                                            <td class="colLast">Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> for the given StAX Result.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#getXMLEventWriter(javax.xml.transform.Result)>getXMLEventWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> result) </code>
+                                            </th>
+                                            <td class="colLast">Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> for the given StAX Result.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createXMLEventReader(java.util.List)>createXMLEventReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/events/XMLEvent.html>XMLEvent</a>&gt; events) </code>
+                                            </th>
+                                            <td class="colLast">Create a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> from the given list of <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/events/XMLEvent.html>XMLEvent</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createContentHandler(javax.xml.stream.XMLStreamWriter)>createContentHandler</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> streamWriter) </code>
+                                            </th>
+                                            <td class="colLast">Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a> that writes to the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createContentHandler(javax.xml.stream.XMLEventWriter)>createContentHandler</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter) </code>
+                                            </th>
+                                            <td class="colLast">Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a> that writes events to the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createXMLReader(javax.xml.stream.XMLStreamReader)>createXMLReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> streamReader) </code>
+                                            </th>
+                                            <td class="colLast">Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a> that reads from the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createXMLReader(javax.xml.stream.XMLEventReader)>createXMLReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader) </code>
+                                            </th>
+                                            <td class="colLast">Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a> that reads from the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createEventStreamReader(javax.xml.stream.XMLEventReader)>createEventStreamReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader) </code>
+                                            </th>
+                                            <td class="colLast">Return a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> that reads from a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createEventStreamWriter(javax.xml.stream.XMLEventWriter)>createEventStreamWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter) </code>
+                                            </th>
+                                            <td class="colLast">Return a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> that writes to a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StaxUtils.html#createEventStreamWriter(javax.xml.stream.XMLEventWriter,javax.xml.stream.XMLEventFactory)>createEventStreamWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter, <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventFactory.html>XMLEventFactory</a> eventFactory) </code>
+                                            </th>
+                                            <td class="colLast">Return a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> that writes to a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="StaxUtils()"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>StaxUtils</h4>
+                                        <pre>StaxUtils()</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="createDefensiveInputFactory()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createDefensiveInputFactory</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html>XMLInputFactory</a> <a href=StaxUtils.html#createDefensiveInputFactory()>createDefensiveInputFactory</a>()</pre>
+                                        <div class="block"><p>Create an <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html>XMLInputFactory</a> with Spring's defensive setup, i.e. no support for the resolution of DTDs and external entities.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createDefensiveInputFactory(java.util.function.Supplier)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createDefensiveInputFactory</h4>
+                                        <pre class="methodSignature"> static &lt;T extends <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLInputFactory.html>XMLInputFactory</a>&gt; <a href=StaxUtils.html#createDefensiveInputFactory(java.util.function.Supplier)>T</a> <a href=StaxUtils.html#createDefensiveInputFactory(java.util.function.Supplier)>createDefensiveInputFactory</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html>Supplier</a>&lt;<a href=StaxUtils.html#createDefensiveInputFactory(java.util.function.Supplier)>T</a>&gt; instanceSupplier)</pre>
+                                        <div class="block"><p>Variant of <a href=StaxUtils.html#createDefensiveInputFactory()>createDefensiveInputFactory</a> with a custom instance.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>instanceSupplier</code> - supplier for the input factory instance</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createStaxSource(javax.xml.stream.XMLStreamReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createStaxSource</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> <a href=StaxUtils.html#createStaxSource(javax.xml.stream.XMLStreamReader)>createStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> streamReader)</pre>
+                                        <div class="block"><p>Create a JAXP 1.4 <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/stax/StAXSource.html>StAXSource</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>streamReader</code> - the StAX stream reader</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createStaxSource(javax.xml.stream.XMLEventReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createStaxSource</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> <a href=StaxUtils.html#createStaxSource(javax.xml.stream.XMLEventReader)>createStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader)</pre>
+                                        <div class="block"><p>Create a JAXP 1.4 <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/stax/StAXSource.html>StAXSource</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>eventReader</code> - the StAX event reader</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createCustomStaxSource(javax.xml.stream.XMLStreamReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createCustomStaxSource</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> <a href=StaxUtils.html#createCustomStaxSource(javax.xml.stream.XMLStreamReader)>createCustomStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> streamReader)</pre>
+                                        <div class="block"><p>Create a custom, non-JAXP 1.4 StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>streamReader</code> - the StAX stream reader</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createCustomStaxSource(javax.xml.stream.XMLEventReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createCustomStaxSource</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> <a href=StaxUtils.html#createCustomStaxSource(javax.xml.stream.XMLEventReader)>createCustomStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader)</pre>
+                                        <div class="block"><p>Create a custom, non-JAXP 1.4 StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>eventReader</code> - the StAX event reader</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isStaxSource(javax.xml.transform.Source)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isStaxSource</h4>
+                                        <pre class="methodSignature"> static boolean <a href=StaxUtils.html#isStaxSource(javax.xml.transform.Source)>isStaxSource</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> source)</pre>
+                                        <div class="block"><p>Indicate whether the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> is a JAXP 1.4 StAX Source or custom StAX Source.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getXMLStreamReader(javax.xml.transform.Source)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getXMLStreamReader</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> <a href=StaxUtils.html#getXMLStreamReader(javax.xml.transform.Source)>getXMLStreamReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> source)</pre>
+                                        <div class="block"><p>Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> for the given StAX Source.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - a JAXP 1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getXMLEventReader(javax.xml.transform.Source)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getXMLEventReader</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> <a href=StaxUtils.html#getXMLEventReader(javax.xml.transform.Source)>getXMLEventReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Source.html>Source</a> source)</pre>
+                                        <div class="block"><p>Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> for the given StAX Source.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - a JAXP 1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createStaxResult(javax.xml.stream.XMLStreamWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createStaxResult</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> <a href=StaxUtils.html#createStaxResult(javax.xml.stream.XMLStreamWriter)>createStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> streamWriter)</pre>
+                                        <div class="block"><p>Create a JAXP 1.4 <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/stax/StAXResult.html>StAXResult</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>streamWriter</code> - the StAX stream writer</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createStaxResult(javax.xml.stream.XMLEventWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createStaxResult</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> <a href=StaxUtils.html#createStaxResult(javax.xml.stream.XMLEventWriter)>createStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter)</pre>
+                                        <div class="block"><p>Create a JAXP 1.4 <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/stax/StAXResult.html>StAXResult</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>eventWriter</code> - the StAX event writer</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createCustomStaxResult(javax.xml.stream.XMLStreamWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createCustomStaxResult</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> <a href=StaxUtils.html#createCustomStaxResult(javax.xml.stream.XMLStreamWriter)>createCustomStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> streamWriter)</pre>
+                                        <div class="block"><p>Create a custom, non-JAXP 1.4 StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>streamWriter</code> - the StAX stream writer</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createCustomStaxResult(javax.xml.stream.XMLEventWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createCustomStaxResult</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> <a href=StaxUtils.html#createCustomStaxResult(javax.xml.stream.XMLEventWriter)>createCustomStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter)</pre>
+                                        <div class="block"><p>Create a custom, non-JAXP 1.4 StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> for the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>eventWriter</code> - the StAX event writer</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isStaxResult(javax.xml.transform.Result)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isStaxResult</h4>
+                                        <pre class="methodSignature"> static boolean <a href=StaxUtils.html#isStaxResult(javax.xml.transform.Result)>isStaxResult</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> result)</pre>
+                                        <div class="block"><p>Indicate whether the given <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> is a JAXP 1.4 StAX Result or custom StAX Result.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getXMLStreamWriter(javax.xml.transform.Result)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getXMLStreamWriter</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> <a href=StaxUtils.html#getXMLStreamWriter(javax.xml.transform.Result)>getXMLStreamWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> result)</pre>
+                                        <div class="block"><p>Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> for the given StAX Result.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>result</code> - a JAXP 1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getXMLEventWriter(javax.xml.transform.Result)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getXMLEventWriter</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> <a href=StaxUtils.html#getXMLEventWriter(javax.xml.transform.Result)>getXMLEventWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/transform/Result.html>Result</a> result)</pre>
+                                        <div class="block"><p>Return the <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> for the given StAX Result.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>result</code> - a JAXP 1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createXMLEventReader(java.util.List)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createXMLEventReader</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> <a href=StaxUtils.html#createXMLEventReader(java.util.List)>createXMLEventReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/events/XMLEvent.html>XMLEvent</a>&gt; events)</pre>
+                                        <div class="block"><p>Create a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> from the given list of <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/events/XMLEvent.html>XMLEvent</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>events</code> - the list of <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/events/XMLEvent.html>XMLEvents</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createContentHandler(javax.xml.stream.XMLStreamWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createContentHandler</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a> <a href=StaxUtils.html#createContentHandler(javax.xml.stream.XMLStreamWriter)>createContentHandler</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> streamWriter)</pre>
+                                        <div class="block"><p>Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a> that writes to the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>streamWriter</code> - the StAX stream writer</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createContentHandler(javax.xml.stream.XMLEventWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createContentHandler</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a> <a href=StaxUtils.html#createContentHandler(javax.xml.stream.XMLEventWriter)>createContentHandler</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter)</pre>
+                                        <div class="block"><p>Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/ContentHandler.html>ContentHandler</a> that writes events to the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>eventWriter</code> - the StAX event writer</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createXMLReader(javax.xml.stream.XMLStreamReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createXMLReader</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a> <a href=StaxUtils.html#createXMLReader(javax.xml.stream.XMLStreamReader)>createXMLReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> streamReader)</pre>
+                                        <div class="block"><p>Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a> that reads from the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>streamReader</code> - the StAX stream reader</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createXMLReader(javax.xml.stream.XMLEventReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createXMLReader</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a> <a href=StaxUtils.html#createXMLReader(javax.xml.stream.XMLEventReader)>createXMLReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader)</pre>
+                                        <div class="block"><p>Create a SAX <a href=https://docs.oracle.com/javase/8/docs/api/org/xml/sax/XMLReader.html>XMLReader</a> that reads from the given StAX <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>eventReader</code> - the StAX event reader</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createEventStreamReader(javax.xml.stream.XMLEventReader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createEventStreamReader</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> <a href=StaxUtils.html#createEventStreamReader(javax.xml.stream.XMLEventReader)>createEventStreamReader</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a> eventReader)</pre>
+                                        <div class="block"><p>Return a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamReader.html>XMLStreamReader</a> that reads from a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventReader.html>XMLEventReader</a>. Useful because the StAX <code>XMLInputFactory</code> allows one to create an event reader from a stream reader, but not vice-versa.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createEventStreamWriter(javax.xml.stream.XMLEventWriter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createEventStreamWriter</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> <a href=StaxUtils.html#createEventStreamWriter(javax.xml.stream.XMLEventWriter)>createEventStreamWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter)</pre>
+                                        <div class="block"><p>Return a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> that writes to a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="createEventStreamWriter(javax.xml.stream.XMLEventWriter,javax.xml.stream.XMLEventFactory)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>createEventStreamWriter</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> <a href=StaxUtils.html#createEventStreamWriter(javax.xml.stream.XMLEventWriter,javax.xml.stream.XMLEventFactory)>createEventStreamWriter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a> eventWriter, <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventFactory.html>XMLEventFactory</a> eventFactory)</pre>
+                                        <div class="block"><p>Return a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLStreamWriter.html>XMLStreamWriter</a> that writes to a <a href=https://docs.oracle.com/javase/8/docs/api/javax/xml/stream/XMLEventWriter.html>XMLEventWriter</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

@@ -1,0 +1,106 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:org.springframework.aot.generate/AccessControl.Visibility///PointingToDeclaration/org/springframework/aot/generate/AccessControl.Visibility.html
+$dokka.location:org.springframework.aot.generate/GeneratedFiles.Kind///PointingToDeclaration/org/springframework/aot/generate/GeneratedFiles.Kind.html
+$dokka.location:org.springframework.aot.generate/MethodReference.ArgumentCodeGenerator///PointingToDeclaration/org/springframework/aot/generate/MethodReference.ArgumentCodeGenerator.html
+$dokka.location:org.springframework.aot.hint.predicate/ReflectionHintsPredicates.ConstructorHintPredicate///PointingToDeclaration/org/springframework/aot/hint/predicate/ReflectionHintsPredicates.ConstructorHintPredicate.html
+$dokka.location:org.springframework.aot.hint.predicate/ReflectionHintsPredicates.ExecutableHintPredicate///PointingToDeclaration/org/springframework/aot/hint/predicate/ReflectionHintsPredicates.ExecutableHintPredicate.html
+$dokka.location:org.springframework.aot.hint.predicate/ReflectionHintsPredicates.FieldHintPredicate///PointingToDeclaration/org/springframework/aot/hint/predicate/ReflectionHintsPredicates.FieldHintPredicate.html
+$dokka.location:org.springframework.aot.hint.predicate/ReflectionHintsPredicates.MethodHintPredicate///PointingToDeclaration/org/springframework/aot/hint/predicate/ReflectionHintsPredicates.MethodHintPredicate.html
+$dokka.location:org.springframework.aot.hint.predicate/ReflectionHintsPredicates.TypeHintPredicate///PointingToDeclaration/org/springframework/aot/hint/predicate/ReflectionHintsPredicates.TypeHintPredicate.html
+$dokka.location:org.springframework.aot.hint.support/FilePatternResourceHintsRegistrar.Builder///PointingToDeclaration/org/springframework/aot/hint/support/FilePatternResourceHintsRegistrar.Builder.html
+$dokka.location:org.springframework.aot.hint/ExecutableHint.Builder///PointingToDeclaration/org/springframework/aot/hint/ExecutableHint.Builder.html
+$dokka.location:org.springframework.aot.hint/JavaSerializationHint.Builder///PointingToDeclaration/org/springframework/aot/hint/JavaSerializationHint.Builder.html
+$dokka.location:org.springframework.aot.hint/JdkProxyHint.Builder///PointingToDeclaration/org/springframework/aot/hint/JdkProxyHint.Builder.html
+$dokka.location:org.springframework.aot.hint/ResourceBundleHint.Builder///PointingToDeclaration/org/springframework/aot/hint/ResourceBundleHint.Builder.html
+$dokka.location:org.springframework.aot.hint/ResourcePatternHints.Builder///PointingToDeclaration/org/springframework/aot/hint/ResourcePatternHints.Builder.html
+$dokka.location:org.springframework.aot.hint/TypeHint.Builder///PointingToDeclaration/org/springframework/aot/hint/TypeHint.Builder.html
+$dokka.location:org.springframework.cglib.beans/BeanCopier.Generator///PointingToDeclaration/org/springframework/cglib/beans/BeanCopier.Generator.html
+$dokka.location:org.springframework.cglib.beans/BeanMap.Generator///PointingToDeclaration/org/springframework/cglib/beans/BeanMap.Generator.html
+$dokka.location:org.springframework.cglib.beans/BulkBean.Generator///PointingToDeclaration/org/springframework/cglib/beans/BulkBean.Generator.html
+$dokka.location:org.springframework.cglib.beans/ImmutableBean.Generator///PointingToDeclaration/org/springframework/cglib/beans/ImmutableBean.Generator.html
+$dokka.location:org.springframework.cglib.core/EmitUtils.ArrayDelimiters///PointingToDeclaration/org/springframework/cglib/core/EmitUtils.ArrayDelimiters.html
+$dokka.location:org.springframework.cglib.core/KeyFactory.Generator///PointingToDeclaration/org/springframework/cglib/core/KeyFactory.Generator.html
+$dokka.location:org.springframework.cglib.proxy/Mixin.Generator///PointingToDeclaration/org/springframework/cglib/proxy/Mixin.Generator.html
+$dokka.location:org.springframework.cglib.reflect/ConstructorDelegate.Generator///PointingToDeclaration/org/springframework/cglib/reflect/ConstructorDelegate.Generator.html
+$dokka.location:org.springframework.cglib.reflect/FastClass.Generator///PointingToDeclaration/org/springframework/cglib/reflect/FastClass.Generator.html
+$dokka.location:org.springframework.cglib.reflect/MethodDelegate.Generator///PointingToDeclaration/org/springframework/cglib/reflect/MethodDelegate.Generator.html
+$dokka.location:org.springframework.cglib.reflect/MulticastDelegate.Generator///PointingToDeclaration/org/springframework/cglib/reflect/MulticastDelegate.Generator.html
+$dokka.location:org.springframework.cglib.transform.impl/AccessFieldTransformer.Callback///PointingToDeclaration/org/springframework/cglib/transform/impl/AccessFieldTransformer.Callback.html
+$dokka.location:org.springframework.cglib.util/ParallelSorter.Generator///PointingToDeclaration/org/springframework/cglib/util/ParallelSorter.Generator.html
+$dokka.location:org.springframework.cglib.util/StringSwitcher.Generator///PointingToDeclaration/org/springframework/cglib/util/StringSwitcher.Generator.html
+$dokka.location:org.springframework.core.annotation/MergedAnnotation.Adapt///PointingToDeclaration/org/springframework/core/annotation/MergedAnnotation.Adapt.html
+$dokka.location:org.springframework.core.annotation/MergedAnnotations.Search///PointingToDeclaration/org/springframework/core/annotation/MergedAnnotations.Search.html
+$dokka.location:org.springframework.core.annotation/MergedAnnotations.SearchStrategy///PointingToDeclaration/org/springframework/core/annotation/MergedAnnotations.SearchStrategy.html
+$dokka.location:org.springframework.core.convert.converter/GenericConverter.ConvertiblePair///PointingToDeclaration/org/springframework/core/convert/converter/GenericConverter.ConvertiblePair.html
+$dokka.location:org.springframework.core.env/PropertySource.StubPropertySource///PointingToDeclaration/org/springframework/core/env/PropertySource.StubPropertySource.html
+$dokka.location:org.springframework.core.io.buffer/DataBuffer.ByteBufferIterator///PointingToDeclaration/org/springframework/core/io/buffer/DataBuffer.ByteBufferIterator.html
+$dokka.location:org.springframework.core.io.buffer/DataBufferUtils.Matcher///PointingToDeclaration/org/springframework/core/io/buffer/DataBufferUtils.Matcher.html
+$dokka.location:org.springframework.core.io.support/SpringFactoriesLoader.ArgumentResolver///PointingToDeclaration/org/springframework/core/io/support/SpringFactoriesLoader.ArgumentResolver.html
+$dokka.location:org.springframework.core.io.support/SpringFactoriesLoader.FailureHandler///PointingToDeclaration/org/springframework/core/io/support/SpringFactoriesLoader.FailureHandler.html
+$dokka.location:org.springframework.core.metrics/StartupStep.Tag///PointingToDeclaration/org/springframework/core/metrics/StartupStep.Tag.html
+$dokka.location:org.springframework.core.metrics/StartupStep.Tags///PointingToDeclaration/org/springframework/core/metrics/StartupStep.Tags.html
+$dokka.location:org.springframework.core/Constants.ConstantException///PointingToDeclaration/org/springframework/core/Constants.ConstantException.html
+$dokka.location:org.springframework.core/MethodIntrospector.MetadataLookup///PointingToDeclaration/org/springframework/core/MethodIntrospector.MetadataLookup.html
+$dokka.location:org.springframework.core/NativeDetector.Context///PointingToDeclaration/org/springframework/core/NativeDetector.Context.html
+$dokka.location:org.springframework.core/OrderComparator.OrderSourceProvider///PointingToDeclaration/org/springframework/core/OrderComparator.OrderSourceProvider.html
+$dokka.location:org.springframework.core/ReactiveAdapterRegistry.SpringCoreBlockHoundIntegration///PointingToDeclaration/org/springframework/core/ReactiveAdapterRegistry.SpringCoreBlockHoundIntegration.html
+$dokka.location:org.springframework.util/AutoPopulatingList.ElementFactory///PointingToDeclaration/org/springframework/util/AutoPopulatingList.ElementFactory.html
+$dokka.location:org.springframework.util/AutoPopulatingList.ElementInstantiationException///PointingToDeclaration/org/springframework/util/AutoPopulatingList.ElementInstantiationException.html
+$dokka.location:org.springframework.util/ConcurrentReferenceHashMap.ReferenceType///PointingToDeclaration/org/springframework/util/ConcurrentReferenceHashMap.ReferenceType.html
+$dokka.location:org.springframework.util/MimeType.SpecificityComparator///PointingToDeclaration/org/springframework/util/MimeType.SpecificityComparator.html
+$dokka.location:org.springframework.util/PropertyPlaceholderHelper.PlaceholderResolver///PointingToDeclaration/org/springframework/util/PropertyPlaceholderHelper.PlaceholderResolver.html
+$dokka.location:org.springframework.util/ReflectionUtils.FieldCallback///PointingToDeclaration/org/springframework/util/ReflectionUtils.FieldCallback.html
+$dokka.location:org.springframework.util/ReflectionUtils.FieldFilter///PointingToDeclaration/org/springframework/util/ReflectionUtils.FieldFilter.html
+$dokka.location:org.springframework.util/ReflectionUtils.MethodCallback///PointingToDeclaration/org/springframework/util/ReflectionUtils.MethodCallback.html
+$dokka.location:org.springframework.util/ReflectionUtils.MethodFilter///PointingToDeclaration/org/springframework/util/ReflectionUtils.MethodFilter.html
+$dokka.location:org.springframework.util/RouteMatcher.Route///PointingToDeclaration/org/springframework/util/RouteMatcher.Route.html
+$dokka.location:org.springframework.util/StopWatch.TaskInfo///PointingToDeclaration/org/springframework/util/StopWatch.TaskInfo.html
+org.springframework.aot
+org.springframework.aot.generate
+org.springframework.aot.hint
+org.springframework.aot.hint.annotation
+org.springframework.aot.hint.predicate
+org.springframework.aot.hint.support
+org.springframework.aot.nativex
+org.springframework.asm
+org.springframework.cglib
+org.springframework.cglib.beans
+org.springframework.cglib.core
+org.springframework.cglib.core.internal
+org.springframework.cglib.proxy
+org.springframework.cglib.reflect
+org.springframework.cglib.transform
+org.springframework.cglib.transform.impl
+org.springframework.cglib.util
+org.springframework.core
+org.springframework.core.annotation
+org.springframework.core.codec
+org.springframework.core.convert
+org.springframework.core.convert.converter
+org.springframework.core.convert.support
+org.springframework.core.env
+org.springframework.core.io
+org.springframework.core.io.buffer
+org.springframework.core.io.support
+org.springframework.core.log
+org.springframework.core.metrics
+org.springframework.core.metrics.jfr
+org.springframework.core.serializer
+org.springframework.core.serializer.support
+org.springframework.core.style
+org.springframework.core.task
+org.springframework.core.task.support
+org.springframework.core.type
+org.springframework.core.type.classreading
+org.springframework.core.type.filter
+org.springframework.lang
+org.springframework.objenesis
+org.springframework.util
+org.springframework.util.backoff
+org.springframework.util.comparator
+org.springframework.util.concurrent
+org.springframework.util.function
+org.springframework.util.unit
+org.springframework.util.xml
+

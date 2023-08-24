@@ -1,0 +1,1299 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>AnnotatedElementUtils 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.core.annotation</a></div>
+        <h2 title="Class AnnotatedElementUtils" class="title">Class AnnotatedElementUtils</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=AnnotatedElementUtils.html>AnnotatedElementUtils</a></span>
+
+                    </pre>
+                    <div class="block"><p>General utility methods for finding annotations, meta-annotations, and repeatable annotations on <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElements</a>. </p><p><code>AnnotatedElementUtils</code> defines the public API for Spring's meta-annotation programming model with support for annotation attribute overrides. If you do not need support for annotation attribute overrides, consider using <a href=AnnotationUtils.html>AnnotationUtils</a> instead. </p><p>Note that the features of this class are not provided by the JDK's introspection facilities themselves. </p><p>Support for meta-annotations with attribute overrides in composed annotations is provided by all variants of the <code>getMergedAnnotationAttributes()</code>, <code>getMergedAnnotation()</code>, <code>getAllMergedAnnotations()</code>, <code>getMergedRepeatableAnnotations()</code>, <code>findMergedAnnotationAttributes()</code>, <code>findMergedAnnotation()</code>, <code>findAllMergedAnnotations()</code>, and <code>findMergedRepeatableAnnotations()</code> methods. </p><p>The search algorithms used by methods in this class follow either find or get semantics. Consult the javadocs for each individual method for details on which search algorithm is used. </p><p>Get semantics are limited to searching for annotations that are either present on an <code>AnnotatedElement</code> (i.e. declared locally or <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Inherited.html>inherited</a>) or declared within the annotation hierarchy above the <code>AnnotatedElement</code>. </p><p>Find semantics are much more exhaustive, providing get semantics plus support for the following: </p><ul><li>Searching on interfaces, if the annotated element is a class </li><li>Searching on superclasses, if the annotated element is a class </li><li>Resolving bridged methods, if the annotated element is a method </li><li>Searching on methods in interfaces, if the annotated element is a method </li><li>Searching on methods in superclasses, if the annotated element is a method </li></ul><p>Methods following get semantics will honor the contract of Java's <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Inherited.html>@Inherited</a> annotation except that locally declared annotations (including custom composed annotations) will be favored over inherited annotations. In contrast, methods following find semantics will completely ignore the presence of <code>@Inherited</code> since the find search algorithm manually traverses type and method hierarchies and thereby implicitly supports annotation inheritance without a need for <code>@Inherited</code>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#AnnotatedElementUtils()">AnnotatedElementUtils</a></span>()</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#forAnnotations(kotlin.Array)>forAnnotations</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotations) </code>
+                                            </th>
+                                            <td class="colLast">Build an adapted <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> for the given annotations, typically for use with other methods on <a href=AnnotatedElementUtils.html>AnnotatedElementUtils</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Get the fully qualified class names of all meta-annotation types present on the annotation (of the specified <code>annotationType</code>) on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName) </code>
+                                            </th>
+                                            <td class="colLast">Get the fully qualified class names of all meta-annotation types present on the annotation (of the specified <code>annotationName</code>) on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#hasMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.Class)>hasMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Determine if the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> is annotated with a composed annotation that is meta-annotated with an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#hasMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.String)>hasMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName) </code>
+                                            </th>
+                                            <td class="colLast">Determine if the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> is annotated with a composed annotation that is meta-annotated with an annotation of the specified <code>annotationName</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#isAnnotated(java.lang.reflect.AnnotatedElement,java.lang.Class)>isAnnotated</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Determine if an annotation of the specified <code>annotationType</code> is present on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> or within the annotation hierarchy above the specified element.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#isAnnotated(java.lang.reflect.AnnotatedElement,java.lang.String)>isAnnotated</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName) </code>
+                                            </th>
+                                            <td class="colLast">Determine if an annotation of the specified <code>annotationName</code> is present on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> or within the annotation hierarchy above the specified element.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=AnnotationAttributes.html>AnnotationAttributes</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Get the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>static <a href=AnnotationAttributes.html>AnnotationAttributes</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName) </code>
+                                            </th>
+                                            <td class="colLast">Get the first annotation of the specified <code>annotationName</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=AnnotationAttributes.html>AnnotationAttributes</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>getMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName, boolean classValuesAsString, boolean nestedAnnotationsAsMap) </code>
+                                            </th>
+                                            <td class="colLast">Get the first annotation of the specified <code>annotationName</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=AnnotatedElementUtils.html#getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedAnnotation</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Get the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy, and synthesize the result back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>getAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Get all annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.util.Set)>getAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt;&gt; annotationTypes) </code>
+                                            </th>
+                                            <td class="colLast">Get all annotations of the specified <code>annotationTypes</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the corresponding <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Get all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>getMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt; annotationType, @<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; containerType) </code>
+                                            </th>
+                                            <td class="colLast">Get all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=../../util/MultiValueMap.html>MultiValueMap</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getAllAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getAllAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName) </code>
+                                            </th>
+                                            <td class="colLast">Get the annotation attributes of all annotations of the specified <code>annotationName</code> in the annotation hierarchy above the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> and store the results in a <a href=../../util/MultiValueMap.html>MultiValueMap</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../../util/MultiValueMap.html>MultiValueMap</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#getAllAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>getAllAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName, boolean classValuesAsString, boolean nestedAnnotationsAsMap) </code>
+                                            </th>
+                                            <td class="colLast">Get the annotation attributes of all annotations of the specified <code>annotationName</code> in the annotation hierarchy above the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> and store the results in a <a href=../../util/MultiValueMap.html>MultiValueMap</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#hasAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>hasAnnotation</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Determine if an annotation of the specified <code>annotationType</code> is available on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> or within the annotation hierarchy above the specified element.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>static <a href=AnnotationAttributes.html>AnnotationAttributes</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.Class,boolean,boolean)>findMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType, boolean classValuesAsString, boolean nestedAnnotationsAsMap) </code>
+                                            </th>
+                                            <td class="colLast">Find the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=AnnotationAttributes.html>AnnotationAttributes</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>findMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName, boolean classValuesAsString, boolean nestedAnnotationsAsMap) </code>
+                                            </th>
+                                            <td class="colLast">Find the first annotation of the specified <code>annotationName</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=AnnotatedElementUtils.html#findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>findMergedAnnotation</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Find the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy, and synthesize the result back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>findAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Find all annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.util.Set)>findAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt;&gt; annotationTypes) </code>
+                                            </th>
+                                            <td class="colLast">Find all annotations of the specified <code>annotationTypes</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the corresponding <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>findMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType) </code>
+                                            </th>
+                                            <td class="colLast">Find all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>findMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt; annotationType, @<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; containerType) </code>
+                                            </th>
+                                            <td class="colLast">Find all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="AnnotatedElementUtils()"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>AnnotatedElementUtils</h4>
+                                        <pre>AnnotatedElementUtils()</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="forAnnotations(kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>forAnnotations</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> <a href=AnnotatedElementUtils.html#forAnnotations(kotlin.Array)>forAnnotations</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotations)</pre>
+                                        <div class="block"><p>Build an adapted <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> for the given annotations, typically for use with other methods on <a href=AnnotatedElementUtils.html>AnnotatedElementUtils</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>annotations</code> - the annotations to expose through the <code>AnnotatedElement</code></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMetaAnnotationTypes</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; <a href=AnnotatedElementUtils.html#getMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Get the fully qualified class names of all meta-annotation types present on the annotation (of the specified <code>annotationType</code>) on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a>. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type on which to find meta-annotations</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMetaAnnotationTypes</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; <a href=AnnotatedElementUtils.html#getMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName)</pre>
+                                        <div class="block"><p>Get the fully qualified class names of all meta-annotation types present on the annotation (of the specified <code>annotationName</code>) on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a>. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotationtype on which to find meta-annotations</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hasMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hasMetaAnnotationTypes</h4>
+                                        <pre class="methodSignature"> static boolean <a href=AnnotatedElementUtils.html#hasMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.Class)>hasMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Determine if the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> is annotated with a composed annotation that is meta-annotated with an annotation of the specified <code>annotationType</code>. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the meta-annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hasMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hasMetaAnnotationTypes</h4>
+                                        <pre class="methodSignature"> static boolean <a href=AnnotatedElementUtils.html#hasMetaAnnotationTypes(java.lang.reflect.AnnotatedElement,java.lang.String)>hasMetaAnnotationTypes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName)</pre>
+                                        <div class="block"><p>Determine if the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> is annotated with a composed annotation that is meta-annotated with an annotation of the specified <code>annotationName</code>. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of themeta-annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isAnnotated(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isAnnotated</h4>
+                                        <pre class="methodSignature"> static boolean <a href=AnnotatedElementUtils.html#isAnnotated(java.lang.reflect.AnnotatedElement,java.lang.Class)>isAnnotated</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Determine if an annotation of the specified <code>annotationType</code> is present on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> or within the annotation hierarchy above the specified element. </p><p>If this method returns <code>true</code>, then getMergedAnnotationAttributes will return a non-null value. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isAnnotated(java.lang.reflect.AnnotatedElement,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isAnnotated</h4>
+                                        <pre class="methodSignature"> static boolean <a href=AnnotatedElementUtils.html#isAnnotated(java.lang.reflect.AnnotatedElement,java.lang.String)>isAnnotated</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName)</pre>
+                                        <div class="block"><p>Determine if an annotation of the specified <code>annotationName</code> is present on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> or within the annotation hierarchy above the specified element. </p><p>If this method returns <code>true</code>, then getMergedAnnotationAttributes will return a non-null value. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMergedAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=AnnotationAttributes.html>AnnotationAttributes</a> <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Get the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy. </p><p>This method delegates to <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMergedAnnotationAttributes</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMergedAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=AnnotationAttributes.html>AnnotationAttributes</a> <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName)</pre>
+                                        <div class="block"><p>Get the first annotation of the specified <code>annotationName</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy. </p><p>This method delegates to <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>getMergedAnnotationAttributes</a>, supplying <code>false</code> for <code>classValuesAsString</code> and <code>nestedAnnotationsAsMap</code>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMergedAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=AnnotationAttributes.html>AnnotationAttributes</a> <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>getMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName, boolean classValuesAsString, boolean nestedAnnotationsAsMap)</pre>
+                                        <div class="block"><p>Get the first annotation of the specified <code>annotationName</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy. </p><p>Attributes from lower levels in the annotation hierarchy override attributes of the same name from higher levels, and <a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy. </p><p>In contrast to getAllAnnotationAttributes, the search algorithm used by this method will stop searching the annotation hierarchy once the first annotation of the specified <code>annotationName</code> has been found. As a consequence, additional annotations of the specified <code>annotationName</code> will be ignored. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotation type to find</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>classValuesAsString</code> - whether to convert Class references into Strings or topreserve them as Class references</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>nestedAnnotationsAsMap</code> - whether to convert nested Annotation instancesinto <code>AnnotationAttributes</code> maps or to preserve them as Annotation instances</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMergedAnnotation</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=AnnotatedElementUtils.html#getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a> <a href=AnnotatedElementUtils.html#getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedAnnotation</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Get the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy, and synthesize the result back into an annotation of the specified <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAllMergedAnnotations</h4>
+                                        <pre class="methodSignature"> static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; <a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>getAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Get all annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find (never <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.util.Set)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAllMergedAnnotations</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=AnnotatedElementUtils.html#getAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.util.Set)>getAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt;&gt; annotationTypes)</pre>
+                                        <div class="block"><p>Get all annotations of the specified <code>annotationTypes</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the corresponding <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationTypes</code> - the annotation types to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMergedRepeatableAnnotations</h4>
+                                        <pre class="methodSignature"> static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; <a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Get all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>. </p><p>The container type that holds the repeatable annotations will be looked up via <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html>java.lang.annotation.Repeatable</a>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find (never <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMergedRepeatableAnnotations</h4>
+                                        <pre class="methodSignature"> static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt; <a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>getMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt; annotationType, @<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; containerType)</pre>
+                                        <div class="block"><p>Get all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>. </p><p>WARNING: if the supplied <code>containerType</code> is not <code>null</code>, the search will be restricted to supporting only repeatable annotations whose container is the supplied <code>containerType</code>. This prevents the search from finding repeatable annotations declared as meta-annotations on other types of repeatable annotations. If you need to support such a use case, favor <a href=AnnotatedElementUtils.html#getMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>getMergedRepeatableAnnotations</a> over this method or alternatively use the <a href=MergedAnnotations.html>MergedAnnotations</a> API directly in conjunction with <a href=RepeatableContainers.html>RepeatableContainers</a> that are <a href=RepeatableContainers.html#and(java.lang.Class,java.lang.Class)>composed</a> to support multiple repeatable annotation types.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>containerType</code> - the type of the container that holds the annotations;may be <code>null</code> if the container type should be looked up via <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html>java.lang.annotation.Repeatable</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAllAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAllAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=../../util/MultiValueMap.html>MultiValueMap</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=AnnotatedElementUtils.html#getAllAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getAllAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName)</pre>
+                                        <div class="block"><p>Get the annotation attributes of all annotations of the specified <code>annotationName</code> in the annotation hierarchy above the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> and store the results in a <a href=../../util/MultiValueMap.html>MultiValueMap</a>. </p><p>Note: in contrast to <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMergedAnnotationAttributes</a>, this method does not support attribute overrides. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAllAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAllAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=../../util/MultiValueMap.html>MultiValueMap</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; <a href=AnnotatedElementUtils.html#getAllAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>getAllAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName, boolean classValuesAsString, boolean nestedAnnotationsAsMap)</pre>
+                                        <div class="block"><p>Get the annotation attributes of all annotations of the specified <code>annotationName</code> in the annotation hierarchy above the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> and store the results in a <a href=../../util/MultiValueMap.html>MultiValueMap</a>. </p><p>Note: in contrast to <a href=AnnotatedElementUtils.html#getMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String)>getMergedAnnotationAttributes</a>, this method does not support attribute overrides. </p><p>This method follows get semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotation type to find</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>classValuesAsString</code> - whether to convert Class references into Strings or topreserve them as Class references</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>nestedAnnotationsAsMap</code> - whether to convert nested Annotation instances into <code>AnnotationAttributes</code> maps or to preserve them as Annotation instances</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hasAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hasAnnotation</h4>
+                                        <pre class="methodSignature"> static boolean <a href=AnnotatedElementUtils.html#hasAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>hasAnnotation</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Determine if an annotation of the specified <code>annotationType</code> is available on the supplied <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> or within the annotation hierarchy above the specified element. </p><p>If this method returns <code>true</code>, then findMergedAnnotationAttributes will return a non-null value. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.Class,boolean,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findMergedAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=AnnotationAttributes.html>AnnotationAttributes</a> <a href=AnnotatedElementUtils.html#findMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.Class,boolean,boolean)>findMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; annotationType, boolean classValuesAsString, boolean nestedAnnotationsAsMap)</pre>
+                                        <div class="block"><p>Find the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy. </p><p>Attributes from lower levels in the annotation hierarchy override attributes of the same name from higher levels, and <a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy. </p><p>In contrast to getAllAnnotationAttributes, the search algorithm used by this method will stop searching the annotation hierarchy once the first annotation of the specified <code>annotationType</code> has been found. As a consequence, additional annotations of the specified <code>annotationType</code> will be ignored. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>classValuesAsString</code> - whether to convert Class references intoStrings or to preserve them as Class references</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>nestedAnnotationsAsMap</code> - whether to convert nested Annotation instances into <code>AnnotationAttributes</code> maps or to preserve them as Annotation instances</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findMergedAnnotationAttributes</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static <a href=AnnotationAttributes.html>AnnotationAttributes</a> <a href=AnnotatedElementUtils.html#findMergedAnnotationAttributes(java.lang.reflect.AnnotatedElement,java.lang.String,boolean,boolean)>findMergedAnnotationAttributes</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> annotationName, boolean classValuesAsString, boolean nestedAnnotationsAsMap)</pre>
+                                        <div class="block"><p>Find the first annotation of the specified <code>annotationName</code> within the annotation hierarchy above the supplied <code>element</code> and merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy. </p><p>Attributes from lower levels in the annotation hierarchy override attributes of the same name from higher levels, and <a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy. </p><p>In contrast to getAllAnnotationAttributes, the search algorithm used by this method will stop searching the annotation hierarchy once the first annotation of the specified <code>annotationName</code> has been found. As a consequence, additional annotations of the specified <code>annotationName</code> will be ignored. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationName</code> - the fully qualified class name of the annotation type to find</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>classValuesAsString</code> - whether to convert Class references into Strings or topreserve them as Class references</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>nestedAnnotationsAsMap</code> - whether to convert nested Annotation instances into <code>AnnotationAttributes</code> maps or to preserve them as Annotation instances</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findMergedAnnotation</h4>
+                                        <pre class="methodSignature">@<a href=../../lang/Nullable.html>Nullable</a>() static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=AnnotatedElementUtils.html#findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a> <a href=AnnotatedElementUtils.html#findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>findMergedAnnotation</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findMergedAnnotation(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Find the first annotation of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy, and synthesize the result back into an annotation of the specified <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within the annotation hierarchy. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findAllMergedAnnotations</h4>
+                                        <pre class="methodSignature"> static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; <a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>findAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Find all annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find (never <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.util.Set)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findAllMergedAnnotations</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=AnnotatedElementUtils.html#findAllMergedAnnotations(java.lang.reflect.AnnotatedElement,java.util.Set)>findAllMergedAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt;&gt; annotationTypes)</pre>
+                                        <div class="block"><p>Find all annotations of the specified <code>annotationTypes</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the corresponding <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationTypes</code> - the annotation types to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findMergedRepeatableAnnotations</h4>
+                                        <pre class="methodSignature"> static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; <a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>findMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>A</a>&gt; annotationType)</pre>
+                                        <div class="block"><p>Find all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>. </p><p>The container type that holds the repeatable annotations will be looked up via <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html>java.lang.annotation.Repeatable</a>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find (never <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findMergedRepeatableAnnotations</h4>
+                                        <pre class="methodSignature"> static &lt;A extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Set.html>Set</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt; <a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>findMergedRepeatableAnnotations</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html>AnnotatedElement</a> element, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;<a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class,java.lang.Class)>A</a>&gt; annotationType, @<a href=../../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html>Class</a>&lt;out <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html>Annotation</a>&gt; containerType)</pre>
+                                        <div class="block"><p>Find all repeatable annotations of the specified <code>annotationType</code> within the annotation hierarchy above the supplied <code>element</code>; and for each annotation found, merge that annotation's attributes with matching attributes from annotations in lower levels of the annotation hierarchy and synthesize the results back into an annotation of the specified <code>annotationType</code>. </p><p><a href=AliasFor.html>@AliasFor</a> semantics are fully supported, both within a single annotation and within annotation hierarchies. </p><p>This method follows find semantics as described in the <a href=AnnotatedElementUtils.html>class-level javadoc</a>. </p><p>WARNING: if the supplied <code>containerType</code> is not <code>null</code>, the search will be restricted to supporting only repeatable annotations whose container is the supplied <code>containerType</code>. This prevents the search from finding repeatable annotations declared as meta-annotations on other types of repeatable annotations. If you need to support such a use case, favor <a href=AnnotatedElementUtils.html#findMergedRepeatableAnnotations(java.lang.reflect.AnnotatedElement,java.lang.Class)>findMergedRepeatableAnnotations</a> over this method or alternatively use the <a href=MergedAnnotations.html>MergedAnnotations</a> API directly in conjunction with <a href=RepeatableContainers.html>RepeatableContainers</a> that are <a href=RepeatableContainers.html#and(java.lang.Class,java.lang.Class)>composed</a> to support multiple repeatable annotation types.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>element</code> - the annotated element (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>annotationType</code> - the annotation type to find (never <code>null</code>)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>containerType</code> - the type of the container that holds the annotations;may be <code>null</code> if the container type should be looked up via <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html>java.lang.annotation.Repeatable</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

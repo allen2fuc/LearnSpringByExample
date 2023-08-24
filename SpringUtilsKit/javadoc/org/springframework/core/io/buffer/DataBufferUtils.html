@@ -1,0 +1,1175 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>DataBufferUtils 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.core.io.buffer</a></div>
+        <h2 title="Class DataBufferUtils" class="title">Class DataBufferUtils</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=DataBufferUtils.html>DataBufferUtils</a></span>
+
+                    </pre>
+                    <div class="block"><p>Utility class for working with <a href=DataBuffer.html>DataBuffers</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="DataBufferUtils.Matcher.html">DataBufferUtils.Matcher</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Contract to find delimiter(s) against one or more data buffers that can be passed one at a time to the <a href=org/springframework/core/io/buffer/DataBufferUtils.Matcher.html#match(org.springframework.core.io.buffer.DataBuffer)>match</a> method.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#DataBufferUtils()">DataBufferUtils</a></span>()</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#readInputStream(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readInputStream</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html>InputStream</a>&gt; inputStreamSupplier, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize) </code>
+                                            </th>
+                                            <td class="colLast">Obtain an <a href=https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html>InputStream</a> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#readByteChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readByteChannel</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ReadableByteChannel.html>ReadableByteChannel</a>&gt; channelSupplier, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize) </code>
+                                            </th>
+                                            <td class="colLast">Obtain a <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ReadableByteChannel.html>ReadableByteChannel</a> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#readAsynchronousFileChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readAsynchronousFileChannel</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a>&gt; channelSupplier, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize) </code>
+                                            </th>
+                                            <td class="colLast">Obtain a <code>AsynchronousFileChannel</code> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#readAsynchronousFileChannel(java.util.concurrent.Callable,long,org.springframework.core.io.buffer.DataBufferFactory,int)>readAsynchronousFileChannel</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a>&gt; channelSupplier, long position, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize) </code>
+                                            </th>
+                                            <td class="colLast">Obtain an <code>AsynchronousFileChannel</code> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s, starting at the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#read(java.nio.file.Path,org.springframework.core.io.buffer.DataBufferFactory,int,kotlin.Array)>read</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html>Path</a> path, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/OpenOption.html>OpenOption</a>&gt; options) </code>
+                                            </th>
+                                            <td class="colLast">Read bytes from the given file <code>Path</code> into a <code>Flux</code> of <code>DataBuffer</code>s.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#read(org.springframework.core.io.Resource,org.springframework.core.io.buffer.DataBufferFactory,int)>read</a>(<a href=../Resource.html>Resource</a> resource, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize) </code>
+                                            </th>
+                                            <td class="colLast">Read the given <code>Resource</code> into a <code>Flux</code> of <code>DataBuffer</code>s.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#read(org.springframework.core.io.Resource,long,org.springframework.core.io.buffer.DataBufferFactory,int)>read</a>(<a href=../Resource.html>Resource</a> resource, long position, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize) </code>
+                                            </th>
+                                            <td class="colLast">Read the given <code>Resource</code> into a <code>Flux</code> of <code>DataBuffer</code>s starting at the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.io.OutputStream)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html>OutputStream</a> outputStream) </code>
+                                            </th>
+                                            <td class="colLast">Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>OutputStream</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.channels.WritableByteChannel)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/WritableByteChannel.html>WritableByteChannel</a> channel) </code>
+                                            </th>
+                                            <td class="colLast">Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>WritableByteChannel</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.channels.AsynchronousFileChannel)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a> channel) </code>
+                                            </th>
+                                            <td class="colLast">Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>AsynchronousFileChannel</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.channels.AsynchronousFileChannel,long)>write</a>(Publisher&lt;out <a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a> channel, long position) </code>
+                                            </th>
+                                            <td class="colLast">Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>AsynchronousFileChannel</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>static Mono&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html>Void</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.file.Path,kotlin.Array)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html>Path</a> destination, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/OpenOption.html>OpenOption</a>&gt; options) </code>
+                                            </th>
+                                            <td class="colLast">Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given file <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html>Path</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; Flux&lt;<a href=DataBufferUtils.html#takeUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#takeUntilByteCount(org.reactivestreams.Publisher,long)>takeUntilByteCount</a>(Publisher&lt;<a href=DataBufferUtils.html#takeUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt; publisher, long maxByteCount) </code>
+                                            </th>
+                                            <td class="colLast">Relay buffers from the given Publisher until the total <a href=DataBuffer.html#readableByteCount()>byte count</a> reaches the given maximum byte count, or until the publisher is complete.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; Flux&lt;<a href=DataBufferUtils.html#skipUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#skipUntilByteCount(org.reactivestreams.Publisher,long)>skipUntilByteCount</a>(Publisher&lt;<a href=DataBufferUtils.html#skipUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt; publisher, long maxByteCount) </code>
+                                            </th>
+                                            <td class="colLast">Skip buffers from the given Publisher until the total <a href=DataBuffer.html#readableByteCount()>byte count</a> reaches the given maximum byte count, or until the publisher is complete.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#retain(T)>T</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#retain(T)>retain</a>(<a href=DataBufferUtils.html#retain(T)>T</a> dataBuffer) </code>
+                                            </th>
+                                            <td class="colLast">Retain the given data buffer, if it is a <a href=PooledDataBuffer.html>PooledDataBuffer</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#touch(T,Object)>T</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#touch(T,Object)>touch</a>(<a href=DataBufferUtils.html#touch(T,Object)>T</a> dataBuffer, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> hint) </code>
+                                            </th>
+                                            <td class="colLast">Associate the given hint with the data buffer if it is a pooled buffer and supports leak tracking.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a>(@<a href=../../../lang/Nullable.html>Nullable</a>() <a href=DataBuffer.html>DataBuffer</a> dataBuffer) </code>
+                                            </th>
+                                            <td class="colLast">Release the given data buffer.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html>Consumer</a>&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#releaseConsumer()>releaseConsumer</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return a consumer that calls <a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a> on all passed data buffers.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>static Mono&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#join(org.reactivestreams.Publisher)>join</a>(Publisher&lt;out <a href=DataBuffer.html>DataBuffer</a>&gt; dataBuffers) </code>
+                                            </th>
+                                            <td class="colLast">Return a new <code>DataBuffer</code> composed of joining together the given <code>dataBuffers</code> elements.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>static Mono&lt;<a href=DataBuffer.html>DataBuffer</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#join(org.reactivestreams.Publisher,int)>join</a>(Publisher&lt;out <a href=DataBuffer.html>DataBuffer</a>&gt; buffers, int maxByteCount) </code>
+                                            </th>
+                                            <td class="colLast">Variant of <a href=DataBufferUtils.html#join(org.reactivestreams.Publisher)>join</a> that behaves the same way up until the specified max number of bytes to buffer.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>static <a href=DataBufferUtils.Matcher.html>DataBufferUtils.Matcher</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#matcher(kotlin.Array)>matcher</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; delimiter) </code>
+                                            </th>
+                                            <td class="colLast">Return a <a href=DataBufferUtils.Matcher.html>Matcher</a> for the given delimiter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=DataBufferUtils.Matcher.html>DataBufferUtils.Matcher</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DataBufferUtils.html#matcher(kotlin.Array)>matcher</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt;&gt; delimiters) </code>
+                                            </th>
+                                            <td class="colLast">Return a <a href=DataBufferUtils.Matcher.html>Matcher</a> for the given delimiters.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="DataBufferUtils()"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>DataBufferUtils</h4>
+                                        <pre>DataBufferUtils()</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="readInputStream(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>readInputStream</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#readInputStream(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readInputStream</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html>InputStream</a>&gt; inputStreamSupplier, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize)</pre>
+                                        <div class="block"><p>Obtain an <a href=https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html>InputStream</a> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s. Closes the input stream when the Flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>inputStreamSupplier</code> - the supplier for the input stream to read from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="readByteChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>readByteChannel</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#readByteChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readByteChannel</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ReadableByteChannel.html>ReadableByteChannel</a>&gt; channelSupplier, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize)</pre>
+                                        <div class="block"><p>Obtain a <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ReadableByteChannel.html>ReadableByteChannel</a> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s. Closes the channel when the Flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>channelSupplier</code> - the supplier for the channel to read from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="readAsynchronousFileChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>readAsynchronousFileChannel</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#readAsynchronousFileChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readAsynchronousFileChannel</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a>&gt; channelSupplier, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize)</pre>
+                                        <div class="block"><p>Obtain a <code>AsynchronousFileChannel</code> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s. Closes the channel when the Flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>channelSupplier</code> - the supplier for the channel to read from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="readAsynchronousFileChannel(java.util.concurrent.Callable,long,org.springframework.core.io.buffer.DataBufferFactory,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>readAsynchronousFileChannel</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#readAsynchronousFileChannel(java.util.concurrent.Callable,long,org.springframework.core.io.buffer.DataBufferFactory,int)>readAsynchronousFileChannel</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html>Callable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a>&gt; channelSupplier, long position, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize)</pre>
+                                        <div class="block"><p>Obtain an <code>AsynchronousFileChannel</code> from the given supplier, and read it into a <code>Flux</code> of <code>DataBuffer</code>s, starting at the given position. Closes the channel when the Flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>channelSupplier</code> - the supplier for the channel to read from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - the position to start reading from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="read(java.nio.file.Path,org.springframework.core.io.buffer.DataBufferFactory,int,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>read</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#read(java.nio.file.Path,org.springframework.core.io.buffer.DataBufferFactory,int,kotlin.Array)>read</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html>Path</a> path, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/OpenOption.html>OpenOption</a>&gt; options)</pre>
+                                        <div class="block"><p>Read bytes from the given file <code>Path</code> into a <code>Flux</code> of <code>DataBuffer</code>s. The method ensures that the file is closed when the flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>path</code> - the path to read bytes from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="read(org.springframework.core.io.Resource,org.springframework.core.io.buffer.DataBufferFactory,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>read</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#read(org.springframework.core.io.Resource,org.springframework.core.io.buffer.DataBufferFactory,int)>read</a>(<a href=../Resource.html>Resource</a> resource, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize)</pre>
+                                        <div class="block"><p>Read the given <code>Resource</code> into a <code>Flux</code> of <code>DataBuffer</code>s. </p><p>If the resource is a file, it is read into an <code>AsynchronousFileChannel</code> and turned to <code>Flux</code> via <a href=DataBufferUtils.html#readAsynchronousFileChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readAsynchronousFileChannel</a> or else fall back to <a href=DataBufferUtils.html#readByteChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readByteChannel</a>. Closes the channel when the flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>resource</code> - the resource to read from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="read(org.springframework.core.io.Resource,long,org.springframework.core.io.buffer.DataBufferFactory,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>read</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#read(org.springframework.core.io.Resource,long,org.springframework.core.io.buffer.DataBufferFactory,int)>read</a>(<a href=../Resource.html>Resource</a> resource, long position, <a href=DataBufferFactory.html>DataBufferFactory</a> bufferFactory, int bufferSize)</pre>
+                                        <div class="block"><p>Read the given <code>Resource</code> into a <code>Flux</code> of <code>DataBuffer</code>s starting at the given position. </p><p>If the resource is a file, it is read into an <code>AsynchronousFileChannel</code> and turned to <code>Flux</code> via <a href=DataBufferUtils.html#readAsynchronousFileChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readAsynchronousFileChannel</a> or else fall back on <a href=DataBufferUtils.html#readByteChannel(java.util.concurrent.Callable,org.springframework.core.io.buffer.DataBufferFactory,int)>readByteChannel</a>. Closes the channel when the flux is terminated.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>resource</code> - the resource to read from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - the position to start reading from</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferFactory</code> - the factory to create data buffers with</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>bufferSize</code> - the maximum size of the data buffers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="write(org.reactivestreams.Publisher,java.io.OutputStream)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>write</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.io.OutputStream)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html>OutputStream</a> outputStream)</pre>
+                                        <div class="block"><p>Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>OutputStream</code>. Does not close the output stream when the flux is terminated, and does not<a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a> the data buffers in the source. If releasing is required, then subscribe to the returned <code>Flux</code> with a <a href=DataBufferUtils.html#releaseConsumer()>releaseConsumer</a>. </p><p>Note that the writing process does not start until the returned <code>Flux</code> is subscribed to.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - the stream of data buffers to be written</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>outputStream</code> - the output stream to write to</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="write(org.reactivestreams.Publisher,java.nio.channels.WritableByteChannel)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>write</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.channels.WritableByteChannel)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/WritableByteChannel.html>WritableByteChannel</a> channel)</pre>
+                                        <div class="block"><p>Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>WritableByteChannel</code>. Does not close the channel when the flux is terminated, and does not<a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a> the data buffers in the source. If releasing is required, then subscribe to the returned <code>Flux</code> with a <a href=DataBufferUtils.html#releaseConsumer()>releaseConsumer</a>. </p><p>Note that the writing process does not start until the returned <code>Flux</code> is subscribed to.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - the stream of data buffers to be written</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>channel</code> - the channel to write to</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="write(org.reactivestreams.Publisher,java.nio.channels.AsynchronousFileChannel)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>write</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.channels.AsynchronousFileChannel)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a> channel)</pre>
+                                        <div class="block"><p>Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>AsynchronousFileChannel</code>. Does not close the channel when the flux is terminated, and does not<a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a> the data buffers in the source. If releasing is required, then subscribe to the returned <code>Flux</code> with a <a href=DataBufferUtils.html#releaseConsumer()>releaseConsumer</a>. </p><p>Note that the writing process does not start until the returned <code>Flux</code> is subscribed to.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - the stream of data buffers to be written</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>channel</code> - the channel to write to</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="write(org.reactivestreams.Publisher,java.nio.channels.AsynchronousFileChannel,long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>write</h4>
+                                        <pre class="methodSignature"> static Flux&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.channels.AsynchronousFileChannel,long)>write</a>(Publisher&lt;out <a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html>AsynchronousFileChannel</a> channel, long position)</pre>
+                                        <div class="block"><p>Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given <code>AsynchronousFileChannel</code>. Does not close the channel when the flux is terminated, and does not<a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a> the data buffers in the source. If releasing is required, then subscribe to the returned <code>Flux</code> with a <a href=DataBufferUtils.html#releaseConsumer()>releaseConsumer</a>. </p><p>Note that the writing process does not start until the returned <code>Flux</code> is subscribed to.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - the stream of data buffers to be written</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>channel</code> - the channel to write to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - the file position where writing is to begin; must be non-negative</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="write(org.reactivestreams.Publisher,java.nio.file.Path,kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>write</h4>
+                                        <pre class="methodSignature"> static Mono&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html>Void</a>&gt; <a href=DataBufferUtils.html#write(org.reactivestreams.Publisher,java.nio.file.Path,kotlin.Array)>write</a>(Publisher&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; source, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html>Path</a> destination, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/OpenOption.html>OpenOption</a>&gt; options)</pre>
+                                        <div class="block"><p>Write the given stream of <a href=DataBuffer.html>DataBuffers</a> to the given file <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html>Path</a>. The optional <code>options</code> parameter specifies how the file is created or opened (defaults to <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/StandardOpenOption.html#CREATE>CREATE</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/StandardOpenOption.html#TRUNCATE_EXISTING>TRUNCATE_EXISTING</a>, and <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/file/StandardOpenOption.html#WRITE>WRITE</a>).</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - the stream of data buffers to be written</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>destination</code> - the path to the file</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>options</code> - the options specifying how the file is opened</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="takeUntilByteCount(org.reactivestreams.Publisher,long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>takeUntilByteCount</h4>
+                                        <pre class="methodSignature"> static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; Flux&lt;<a href=DataBufferUtils.html#takeUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt; <a href=DataBufferUtils.html#takeUntilByteCount(org.reactivestreams.Publisher,long)>takeUntilByteCount</a>(Publisher&lt;<a href=DataBufferUtils.html#takeUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt; publisher, long maxByteCount)</pre>
+                                        <div class="block"><p>Relay buffers from the given Publisher until the total <a href=DataBuffer.html#readableByteCount()>byte count</a> reaches the given maximum byte count, or until the publisher is complete.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>publisher</code> - the publisher to filter</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>maxByteCount</code> - the maximum byte count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="skipUntilByteCount(org.reactivestreams.Publisher,long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>skipUntilByteCount</h4>
+                                        <pre class="methodSignature"> static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; Flux&lt;<a href=DataBufferUtils.html#skipUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt; <a href=DataBufferUtils.html#skipUntilByteCount(org.reactivestreams.Publisher,long)>skipUntilByteCount</a>(Publisher&lt;<a href=DataBufferUtils.html#skipUntilByteCount(org.reactivestreams.Publisher,long)>T</a>&gt; publisher, long maxByteCount)</pre>
+                                        <div class="block"><p>Skip buffers from the given Publisher until the total <a href=DataBuffer.html#readableByteCount()>byte count</a> reaches the given maximum byte count, or until the publisher is complete.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>publisher</code> - the publisher to filter</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>maxByteCount</code> - the maximum byte count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="retain(T)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>retain</h4>
+                                        <pre class="methodSignature"> static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#retain(T)>T</a> <a href=DataBufferUtils.html#retain(T)>retain</a>(<a href=DataBufferUtils.html#retain(T)>T</a> dataBuffer)</pre>
+                                        <div class="block"><p>Retain the given data buffer, if it is a <a href=PooledDataBuffer.html>PooledDataBuffer</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>dataBuffer</code> - the data buffer to retain</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="touch(T,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>touch</h4>
+                                        <pre class="methodSignature"> static &lt;T extends <a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#touch(T,Object)>T</a> <a href=DataBufferUtils.html#touch(T,Object)>touch</a>(<a href=DataBufferUtils.html#touch(T,Object)>T</a> dataBuffer, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> hint)</pre>
+                                        <div class="block"><p>Associate the given hint with the data buffer if it is a pooled buffer and supports leak tracking.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>dataBuffer</code> - the data buffer to attach the hint to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>hint</code> - the hint to attach</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="release(org.springframework.core.io.buffer.DataBuffer)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>release</h4>
+                                        <pre class="methodSignature"> static boolean <a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a>(@<a href=../../../lang/Nullable.html>Nullable</a>() <a href=DataBuffer.html>DataBuffer</a> dataBuffer)</pre>
+                                        <div class="block"><p>Release the given data buffer. If it is a <a href=PooledDataBuffer.html>PooledDataBuffer</a> and has been <a href=PooledDataBuffer.html#isAllocated()>allocated</a>, this method will call <a href=PooledDataBuffer.html#release()>release</a>. If it is a <a href=CloseableDataBuffer.html>CloseableDataBuffer</a>, this method will call <a href=CloseableDataBuffer.html#close()>close</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>dataBuffer</code> - the data buffer to release</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="releaseConsumer()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>releaseConsumer</h4>
+                                        <pre class="methodSignature"> static <a href=https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html>Consumer</a>&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#releaseConsumer()>releaseConsumer</a>()</pre>
+                                        <div class="block"><p>Return a consumer that calls <a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>release</a> on all passed data buffers.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="join(org.reactivestreams.Publisher)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>join</h4>
+                                        <pre class="methodSignature"> static Mono&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#join(org.reactivestreams.Publisher)>join</a>(Publisher&lt;out <a href=DataBuffer.html>DataBuffer</a>&gt; dataBuffers)</pre>
+                                        <div class="block"><p>Return a new <code>DataBuffer</code> composed of joining together the given <code>dataBuffers</code> elements. Depending on the <a href=DataBuffer.html>DataBuffer</a> type, the returned buffer may be a single buffer containing all data of the provided buffers, or it may be a zero-copy, composite with references to the given buffers. </p><p>If <code>dataBuffers</code> produces an error or if there is a cancel signal, then all accumulated buffers will be <a href=DataBufferUtils.html#release(org.springframework.core.io.buffer.DataBuffer)>released</a>. </p><p>Note that the given data buffers do not have to be released. They will be released as part of the returned composite.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>dataBuffers</code> - the data buffers that are to be composed</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="join(org.reactivestreams.Publisher,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>join</h4>
+                                        <pre class="methodSignature"> static Mono&lt;<a href=DataBuffer.html>DataBuffer</a>&gt; <a href=DataBufferUtils.html#join(org.reactivestreams.Publisher,int)>join</a>(Publisher&lt;out <a href=DataBuffer.html>DataBuffer</a>&gt; buffers, int maxByteCount)</pre>
+                                        <div class="block"><p>Variant of <a href=DataBufferUtils.html#join(org.reactivestreams.Publisher)>join</a> that behaves the same way up until the specified max number of bytes to buffer. Once the limit is exceeded, <a href=DataBufferLimitException.html>DataBufferLimitException</a> is raised.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>buffers</code> - the data buffers that are to be composed</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>maxByteCount</code> - the max number of bytes to buffer, or -1 for unlimited</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="matcher(kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>matcher</h4>
+                                        <pre class="methodSignature"> static <a href=DataBufferUtils.Matcher.html>DataBufferUtils.Matcher</a> <a href=DataBufferUtils.html#matcher(kotlin.Array)>matcher</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; delimiter)</pre>
+                                        <div class="block"><p>Return a <a href=DataBufferUtils.Matcher.html>Matcher</a> for the given delimiter. The matcher can be used to find the delimiters in a stream of data buffers.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>delimiter</code> - the delimiter bytes to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="matcher(kotlin.Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>matcher</h4>
+                                        <pre class="methodSignature"> static <a href=DataBufferUtils.Matcher.html>DataBufferUtils.Matcher</a> <a href=DataBufferUtils.html#matcher(kotlin.Array)>matcher</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt;&gt; delimiters)</pre>
+                                        <div class="block"><p>Return a <a href=DataBufferUtils.Matcher.html>Matcher</a> for the given delimiters. The matcher can be used to find the delimiters in a stream of data buffers.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>delimiters</code> - the delimiters bytes to find</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

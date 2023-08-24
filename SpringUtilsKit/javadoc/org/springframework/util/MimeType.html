@@ -1,0 +1,1090 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>MimeType 6.1.0-SNAPSHOT API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">org.springframework.util</a></div>
+        <h2 title="Class MimeType" class="title">Class MimeType</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>java.io.Serializable</code>
+                            
+                            ,
+                            
+                            
+                            <code>java.lang.Comparable</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=MimeType.html>MimeType</a></span>
+ implements <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html>Comparable</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html>T</a>&gt;, <a href=https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html>Serializable</a>
+                    </pre>
+                    <div class="block"><p>Represents a MIME Type, as originally defined in RFC 2046 and subsequently used in other Internet protocols including HTTP. </p><p>This class, however, does not contain support for the q-parameters used in HTTP content negotiation. Those can be found in the subclass <code>org.springframework.http.MediaType</code> in the <code>spring-web</code> module. </p><p>Consists of a <a href=MimeType.html#getType()>type</a> and a <a href=MimeType.html#getSubtype()>subtype</a>. Also has functionality to parse MIME Type values from a <code>String</code> using <a href=MimeType.html#valueOf(java.lang.String)>valueOf</a>. For more parsing options see <a href=MimeTypeUtils.html>MimeTypeUtils</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="MimeType.SpecificityComparator.html">MimeType.SpecificityComparator</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Comparator to sort <a href=org/springframework/util/MimeType.html>MimeTypes</a> in order of specificity.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#type>type</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#subtype>subtype</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#parameters>parameters</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MimeType(java.lang.String)">MimeType</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type)</code></th>
+                                                <td class="colLast">Create a new <code>MimeType</code> for the given primary type.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MimeType(java.lang.String,java.lang.String)">MimeType</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> subtype)</code></th>
+                                                <td class="colLast">Create a new <code>MimeType</code> for the given primary type and subtype.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MimeType(java.lang.String,java.lang.String,java.nio.charset.Charset)">MimeType</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> subtype, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html>Charset</a> charset)</code></th>
+                                                <td class="colLast">Create a new <code>MimeType</code> for the given type, subtype, and character set.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MimeType(org.springframework.util.MimeType,java.nio.charset.Charset)">MimeType</a></span>(<a href=MimeType.html>MimeType</a> other, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html>Charset</a> charset)</code></th>
+                                                <td class="colLast">Copy-constructor that copies the type, subtype, parameters of the given <code>MimeType</code>, and allows to set the specified character set.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MimeType(org.springframework.util.MimeType,java.util.Map)">MimeType</a></span>(<a href=MimeType.html>MimeType</a> other, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; parameters)</code></th>
+                                                <td class="colLast">Copy-constructor that copies the type and subtype of the given <code>MimeType</code>, and allows for different parameter.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MimeType(java.lang.String,java.lang.String,java.util.Map)">MimeType</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> subtype, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; parameters)</code></th>
+                                                <td class="colLast">Create a new <code>MimeType</code> for the given type, subtype, and parameters.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#getType()>getType</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the primary type.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#getSubtype()>getSubtype</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the subtype.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#getParameters()>getParameters</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return all generic parameter values.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isWildcardType()>isWildcardType</a>() </code>
+                                            </th>
+                                            <td class="colLast">Indicates whether the <a href=MimeType.html#getType()>type</a> is the wildcard character <code>*</code> or not.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isWildcardSubtype()>isWildcardSubtype</a>() </code>
+                                            </th>
+                                            <td class="colLast">Indicates whether the <a href=MimeType.html#getSubtype()>subtype</a> is the wildcard character <code>*</code> or the wildcard character followed by a suffix (e.g.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isConcrete()>isConcrete</a>() </code>
+                                            </th>
+                                            <td class="colLast">Indicates whether this MIME Type is concrete, i.e.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#getSubtypeSuffix()>getSubtypeSuffix</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the subtype suffix as defined in RFC 6839.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html>Charset</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#getCharset()>getCharset</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the character set, as indicated by a <code>charset</code> parameter, if any.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#getParameter(java.lang.String)>getParameter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> name) </code>
+                                            </th>
+                                            <td class="colLast">Return a generic parameter value, given a parameter name.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#includes(org.springframework.util.MimeType)>includes</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=MimeType.html>MimeType</a> other) </code>
+                                            </th>
+                                            <td class="colLast">Indicate whether this MIME Type includes the given MIME Type.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isCompatibleWith(org.springframework.util.MimeType)>isCompatibleWith</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=MimeType.html>MimeType</a> other) </code>
+                                            </th>
+                                            <td class="colLast">Indicate whether this MIME Type is compatible with the given MIME Type.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#equalsTypeAndSubtype(org.springframework.util.MimeType)>equalsTypeAndSubtype</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=MimeType.html>MimeType</a> other) </code>
+                                            </th>
+                                            <td class="colLast">Similar to <a href=MimeType.html#equals(Object)>equals</a> but based on the type and subtype only, i.e.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isPresentIn(java.util.Collection)>isPresentIn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html>Collection</a>&lt;out <a href=MimeType.html>MimeType</a>&gt; mimeTypes) </code>
+                                            </th>
+                                            <td class="colLast">Unlike <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#contains-java.lang.Object->contains</a> which relies on <a href=MimeType.html#equals(Object)>equals</a>, this method only checks the type and the subtype, but otherwise ignores parameters.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#equals(Object)>equals</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> other) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#hashCode()>hashCode</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#toString()>toString</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#compareTo(org.springframework.util.MimeType)>compareTo</a>(<a href=MimeType.html>MimeType</a> other) </code>
+                                            </th>
+                                            <td class="colLast">Compares this MIME Type to another alphabetically.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isMoreSpecific(org.springframework.util.MimeType)>isMoreSpecific</a>(<a href=MimeType.html>MimeType</a> other) </code>
+                                            </th>
+                                            <td class="colLast">Indicates whether this <code>MimeType</code> is more specific than the given type.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#isLessSpecific(org.springframework.util.MimeType)>isLessSpecific</a>(<a href=MimeType.html>MimeType</a> other) </code>
+                                            </th>
+                                            <td class="colLast">Indicates whether this <code>MimeType</code> is more less than the given type.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=MimeType.html>MimeType</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MimeType.html#valueOf(java.lang.String)>valueOf</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Parse the given String value into a <code>MimeType</code> object, with this method name following the 'valueOf' naming convention (as supported by <a href=../core/convert/ConversionService.html>org.springframework.core.convert.ConversionService</a>.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="MimeType(java.lang.String)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MimeType</h4>
+                                        <pre>MimeType(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type)</pre>
+                                        <div class="block">Create a new <code>MimeType</code> for the given primary type.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>type</code> - the primary type</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="MimeType(java.lang.String,java.lang.String)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MimeType</h4>
+                                        <pre>MimeType(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> subtype)</pre>
+                                        <div class="block">Create a new <code>MimeType</code> for the given primary type and subtype.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>type</code> - the primary type</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>subtype</code> - the subtype</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="MimeType(java.lang.String,java.lang.String,java.nio.charset.Charset)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MimeType</h4>
+                                        <pre>MimeType(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> subtype, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html>Charset</a> charset)</pre>
+                                        <div class="block">Create a new <code>MimeType</code> for the given type, subtype, and character set.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>type</code> - the primary type</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>subtype</code> - the subtype</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>charset</code> - the character set</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="MimeType(org.springframework.util.MimeType,java.nio.charset.Charset)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MimeType</h4>
+                                        <pre>MimeType(<a href=MimeType.html>MimeType</a> other, <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html>Charset</a> charset)</pre>
+                                        <div class="block">Copy-constructor that copies the type, subtype, parameters of the given <code>MimeType</code>, and allows to set the specified character set.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the other MimeType</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>charset</code> - the character set</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="MimeType(org.springframework.util.MimeType,java.util.Map)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MimeType</h4>
+                                        <pre>MimeType(<a href=MimeType.html>MimeType</a> other, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; parameters)</pre>
+                                        <div class="block">Copy-constructor that copies the type and subtype of the given <code>MimeType</code>, and allows for different parameter.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the other MimeType</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parameters</code> - the parameters (may be <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="MimeType(java.lang.String,java.lang.String,java.util.Map)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MimeType</h4>
+                                        <pre>MimeType(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> type, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> subtype, <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; parameters)</pre>
+                                        <div class="block">Create a new <code>MimeType</code> for the given type, subtype, and parameters.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>type</code> - the primary type</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>subtype</code> - the subtype</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parameters</code> - the parameters (may be <code>null</code>)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getType()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getType</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MimeType.html#getType()>getType</a>()</pre>
+                                        <div class="block"><p>Return the primary type.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSubtype()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSubtype</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MimeType.html#getSubtype()>getSubtype</a>()</pre>
+                                        <div class="block"><p>Return the subtype.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getParameters()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getParameters</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>&gt; <a href=MimeType.html#getParameters()>getParameters</a>()</pre>
+                                        <div class="block"><p>Return all generic parameter values.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isWildcardType()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isWildcardType</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isWildcardType()>isWildcardType</a>()</pre>
+                                        <div class="block"><p>Indicates whether the <a href=MimeType.html#getType()>type</a> is the wildcard character <code>*</code> or not.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isWildcardSubtype()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isWildcardSubtype</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isWildcardSubtype()>isWildcardSubtype</a>()</pre>
+                                        <div class="block"><p>Indicates whether the <a href=MimeType.html#getSubtype()>subtype</a> is the wildcard character <code>*</code> or the wildcard character followed by a suffix (e.g. <code>*+xml</code>).</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isConcrete()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isConcrete</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isConcrete()>isConcrete</a>()</pre>
+                                        <div class="block"><p>Indicates whether this MIME Type is concrete, i.e. whether neither the type nor the subtype is a wildcard character <code>*</code>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSubtypeSuffix()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSubtypeSuffix</h4>
+                                        <pre class="methodSignature">@<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MimeType.html#getSubtypeSuffix()>getSubtypeSuffix</a>()</pre>
+                                        <div class="block"><p>Return the subtype suffix as defined in RFC 6839.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getCharset()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getCharset</h4>
+                                        <pre class="methodSignature">@<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html>Charset</a> <a href=MimeType.html#getCharset()>getCharset</a>()</pre>
+                                        <div class="block"><p>Return the character set, as indicated by a <code>charset</code> parameter, if any.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getParameter(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getParameter</h4>
+                                        <pre class="methodSignature">@<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MimeType.html#getParameter(java.lang.String)>getParameter</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> name)</pre>
+                                        <div class="block"><p>Return a generic parameter value, given a parameter name.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>name</code> - the parameter name</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="includes(org.springframework.util.MimeType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>includes</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#includes(org.springframework.util.MimeType)>includes</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=MimeType.html>MimeType</a> other)</pre>
+                                        <div class="block"><p>Indicate whether this MIME Type includes the given MIME Type. </p><p>For instance, <code>text/*</code> includes <code>text/plain</code> and <code>text/html</code>, and <code>application/*+xml</code> includes <code>application/soap+xml</code>, etc. This method is not symmetric.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the reference MIME Type with which to compare</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isCompatibleWith(org.springframework.util.MimeType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isCompatibleWith</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isCompatibleWith(org.springframework.util.MimeType)>isCompatibleWith</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=MimeType.html>MimeType</a> other)</pre>
+                                        <div class="block"><p>Indicate whether this MIME Type is compatible with the given MIME Type. </p><p>For instance, <code>text/*</code> is compatible with <code>text/plain</code>, <code>text/html</code>, and vice versa. In effect, this method is similar to <a href=MimeType.html#includes(org.springframework.util.MimeType)>includes</a>, except that it is symmetric.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the reference MIME Type with which to compare</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="equalsTypeAndSubtype(org.springframework.util.MimeType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>equalsTypeAndSubtype</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#equalsTypeAndSubtype(org.springframework.util.MimeType)>equalsTypeAndSubtype</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=MimeType.html>MimeType</a> other)</pre>
+                                        <div class="block"><p>Similar to <a href=MimeType.html#equals(Object)>equals</a> but based on the type and subtype only, i.e. ignoring parameters.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the other mime type to compare to</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isPresentIn(java.util.Collection)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isPresentIn</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isPresentIn(java.util.Collection)>isPresentIn</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html>Collection</a>&lt;out <a href=MimeType.html>MimeType</a>&gt; mimeTypes)</pre>
+                                        <div class="block"><p>Unlike <a href=https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#contains-java.lang.Object->contains</a> which relies on <a href=MimeType.html#equals(Object)>equals</a>, this method only checks the type and the subtype, but otherwise ignores parameters.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>mimeTypes</code> - the list of mime types to perform the check against</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="equals(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>equals</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#equals(Object)>equals</a>(@<a href=../lang/Nullable.html>Nullable</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> other)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hashCode()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hashCode</h4>
+                                        <pre class="methodSignature"> int <a href=MimeType.html#hashCode()>hashCode</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="toString()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>toString</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MimeType.html#toString()>toString</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="compareTo(org.springframework.util.MimeType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>compareTo</h4>
+                                        <pre class="methodSignature"> int <a href=MimeType.html#compareTo(org.springframework.util.MimeType)>compareTo</a>(<a href=MimeType.html>MimeType</a> other)</pre>
+                                        <div class="block"><p>Compares this MIME Type to another alphabetically.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the MIME Type to compare to</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isMoreSpecific(org.springframework.util.MimeType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isMoreSpecific</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isMoreSpecific(org.springframework.util.MimeType)>isMoreSpecific</a>(<a href=MimeType.html>MimeType</a> other)</pre>
+                                        <div class="block"><p>Indicates whether this <code>MimeType</code> is more specific than the given type. </p><ul><li>if this mime type has a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does not, then this method returns <code>false</code>.</li><li>if this mime type does not have a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does, then this method returns <code>true</code>.</li><li>if this mime type has a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does not, then this method returns <code>false</code>.</li><li>if this mime type does not have a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does, then this method returns <code>true</code>.</li><li>if the two mime types have identical <a href=MimeType.html#getType()>type</a> and <a href=MimeType.html#getSubtype()>subtype</a>, then the mime type with the most parameters is more specific than the other.</li><li>Otherwise, this method returns <code>false</code>.</li></ul></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the <code>MimeType</code> to be compared</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isLessSpecific(org.springframework.util.MimeType)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isLessSpecific</h4>
+                                        <pre class="methodSignature"> boolean <a href=MimeType.html#isLessSpecific(org.springframework.util.MimeType)>isLessSpecific</a>(<a href=MimeType.html>MimeType</a> other)</pre>
+                                        <div class="block"><p>Indicates whether this <code>MimeType</code> is more less than the given type. </p><ul><li>if this mime type has a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does not, then this method returns <code>true</code>.</li><li>if this mime type does not have a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does, then this method returns <code>false</code>.</li><li>if this mime type has a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does not, then this method returns <code>true</code>.</li><li>if this mime type does not have a <a href=MimeType.html#isWildcardType()>wildcard type</a>, and the other does, then this method returns <code>false</code>.</li><li>if the two mime types have identical <a href=MimeType.html#getType()>type</a> and <a href=MimeType.html#getSubtype()>subtype</a>, then the mime type with the least parameters is less specific than the other.</li><li>Otherwise, this method returns <code>false</code>.</li></ul></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>other</code> - the <code>MimeType</code> to be compared</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="valueOf(java.lang.String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>valueOf</h4>
+                                        <pre class="methodSignature"> static <a href=MimeType.html>MimeType</a> <a href=MimeType.html#valueOf(java.lang.String)>valueOf</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> value)</pre>
+                                        <div class="block"><p>Parse the given String value into a <code>MimeType</code> object, with this method name following the 'valueOf' naming convention (as supported by <a href=../core/convert/ConversionService.html>org.springframework.core.convert.ConversionService</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
